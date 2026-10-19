@@ -1,0 +1,479 @@
+{
+  "type": "sample_digest",
+  "window": {
+    "start": "2026-09-03",
+    "end": "2026-09-10",
+    "note": "Includes Cursor Sep 2 self-hosted as near-window edge"
+  },
+  "generated_at": "2026-09-10T14:15:00+08:00",
+  "synthesis": "This week’s spine is GPT-6 Astra: OpenAI’s frontier launch cascaded into coding-agent changelogs (Codex/Pi/OpenCode), enterprise surfaces (ChatGPT Work, Snowflake Cortex), and research formalization loops. Parallel tracks: Anthropic’s Lean FLT and OpenAI’s Navier–Stokes show multi-agent formalization at Millennium-problem scale; Cursor and xAI push persistent/self-hosted agents inside security boundaries. Serving/infra moves include Inco’s inference platform, OpenRouter residency + hosted shell, and NVIDIA multimodal EPD serving. Data/enterprise builders got CoCo reproducibility and Cortex model choice (Astra/Grok 4.6), while HF funes deepens coding-agent memory ownership.",
+  "categories": {
+    "changelog_feature": {
+      "summary": "Coding agents raced to wire GPT-6 Astra and harden durable-agent UX: Codex 0.154.0 ships Astra + experimental worktrees and async questions; Pi 0.85.x and OpenCode follow with Astra support; Claude Code defaults Fable 5.1 and stabilizes effort/cache; Cursor self-hosted machines keep tool execution inside customer networks.",
+      "picks": [
+        {
+          "title": "Codex CLI 0.154.0",
+          "date": "2026-09-09",
+          "url": "https://developers.openai.com/codex/changelog",
+          "tags": [
+            "cli",
+            "feature",
+            "models",
+            "worktree"
+          ],
+          "why": "GPT-6-Astra in picker/Bedrock; experimental --worktree; inline async questions; Windows daemon.",
+          "track": "application_changelog",
+          "category": "changelog_feature",
+          "source_id": "codex-changelog",
+          "application_relevant": true
+        },
+        {
+          "title": "Pi 0.85.1",
+          "date": "2026-09-05",
+          "url": "https://pi.dev/news/releases",
+          "tags": [
+            "cli",
+            "models",
+            "feature"
+          ],
+          "why": "GPT-6 Astra via OpenAI API / Codex subscriptions.",
+          "track": "application_changelog",
+          "category": "changelog_feature",
+          "source_id": "pi-changelog",
+          "application_relevant": true
+        },
+        {
+          "title": "Pi 0.85.0",
+          "date": "2026-09-04",
+          "url": "https://pi.dev/news/releases",
+          "tags": [
+            "cli",
+            "feature"
+          ],
+          "why": "Persistent Claude thinking effort; fullscreen transcript controls; restorable in-memory sessions.",
+          "track": "application_changelog",
+          "category": "changelog_feature",
+          "source_id": "pi-changelog",
+          "application_relevant": true
+        },
+        {
+          "title": "OpenCode v1.18.30",
+          "date": "2026-09-09",
+          "url": "https://opencode.ai/changelog",
+          "tags": [
+            "cli",
+            "models",
+            "feature"
+          ],
+          "why": "Astra system prompt; Bedrock DeepSeek ID fixes.",
+          "track": "application_changelog",
+          "category": "changelog_feature",
+          "source_id": "opencode-changelog",
+          "application_relevant": true
+        },
+        {
+          "title": "Claude Code: Fable 5.1 default + effort/cache & worktree improvements",
+          "date": "2026-09-10",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "tags": [
+            "cli",
+            "ide",
+            "feature",
+            "models"
+          ],
+          "why": "Fable 5.1 default Fable model; mid-session effort cache stability; /diff panel; Remote Control/worktree fixes.",
+          "track": "application_changelog",
+          "category": "changelog_feature",
+          "source_id": "claude-code-changelog",
+          "application_relevant": true
+        },
+        {
+          "title": "Self-hosted machines",
+          "date": "2026-09-02",
+          "url": "https://cursor.com/changelog",
+          "tags": [
+            "ide",
+            "feature",
+            "self-host"
+          ],
+          "why": "Self-hosted workers/pools; tool exec stays in-network; computer use on Linux/Mac; sandbox providers.",
+          "track": "application_changelog",
+          "category": "changelog_feature",
+          "source_id": "cursor-changelog",
+          "application_relevant": true
+        }
+      ]
+    },
+    "applications": {
+      "summary": "App-layer focus is governed enterprise agents and coding/data workflows: OpenAI Work + Images 2.5, xAI Grok Bot Enterprise, Snowflake Cortex (Astra/Grok 4.6) plus CoCo reproducibility, HF funes local agent memory, OpenRouter hosted shell, Mistral legacy-modernization agents, Cursor self-hosted product narrative, and NVIDIA NemoClaw memory agents.",
+      "picks": [
+        {
+          "title": "GPT-6 Astra: The next generation in intelligence for work",
+          "date": "2026-09-09",
+          "url": "https://openai.com/index/gpt-6-astra-next-generation-work/",
+          "tags": [
+            "product",
+            "enterprise",
+            "workflow",
+            "agents"
+          ],
+          "why": "Astra in ChatGPT Work/Codex/API; cost-efficiency on professional/coding evals; computer-use safety controls.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "openai-news",
+          "application_relevant": true
+        },
+        {
+          "title": "Introducing ChatGPT Images 2.5",
+          "date": "2026-09-08",
+          "url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+          "tags": [
+            "product",
+            "multimodal"
+          ],
+          "why": "Images 2.5 + Sketch/templates; API Flare/Sunburst; up to 50% lower latency vs Images 2.0.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "openai-news",
+          "application_relevant": true
+        },
+        {
+          "title": "Grok Bot for Enterprise",
+          "date": "2026-09-03",
+          "url": "https://x.ai/news/grok-bot-for-enterprise",
+          "tags": [
+            "agents",
+            "enterprise",
+            "product",
+            "workflow"
+          ],
+          "why": "Enterprise Grok Bot with org governance/audit; free trial window for Grok/Cursor Enterprise.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "xai",
+          "application_relevant": true
+        },
+        {
+          "title": "Designing Grok Bot for a world of persistent agents",
+          "date": "2026-09-03",
+          "url": "https://x.ai/news/designing-grok-bot",
+          "tags": [
+            "agents",
+            "product",
+            "workflow"
+          ],
+          "why": "Design essay: persistent Bots with memory, Routines, tools, and artifacts.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "xai",
+          "application_relevant": true
+        },
+        {
+          "title": "Announcing OpenAI GPT-6 Astra on Snowflake Cortex AI",
+          "date": "2026-09-09",
+          "url": "https://www.snowflake.com/en/blog/openai-gpt-6-astra-snowflake-cortex-ai/",
+          "tags": [
+            "enterprise",
+            "product",
+            "agents",
+            "data-mlops"
+          ],
+          "why": "Astra private preview in Cortex (CoCo/CoWork/Agents/Functions) inside Snowflake perimeter.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "snowflake",
+          "application_relevant": true
+        },
+        {
+          "title": "Build Reproducible Data Pipelines with CoCo, Snowflake's AI Coding Agent",
+          "date": "2026-09-04",
+          "url": "https://www.snowflake.com/en/blog/snowflake-coco-data-engineering/",
+          "tags": [
+            "agents",
+            "data-mlops",
+            "workflow",
+            "enterprise"
+          ],
+          "why": "CoCo skills/plugins playbook for reproducible Snowflake data-engineering workflows.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "snowflake",
+          "application_relevant": true
+        },
+        {
+          "title": "Announcing Grok 4.6 on Snowflake Cortex AI",
+          "date": "2026-09-03",
+          "url": "https://www.snowflake.com/en/blog/announcing-grok-4-6-snowflake-cortex-ai/",
+          "tags": [
+            "enterprise",
+            "product",
+            "api-drop"
+          ],
+          "why": "Grok 4.6 public preview on Cortex AI Functions/Inference; CoCo/CoWork coming soon.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "snowflake",
+          "application_relevant": true
+        },
+        {
+          "title": "Give Your Coding Agents a Memory You Own",
+          "date": "2026-09-03",
+          "url": "https://huggingface.co/blog/funes",
+          "tags": [
+            "agents",
+            "product",
+            "workflow"
+          ],
+          "why": "funes: local-first durable memory for Claude Code/Codex/pi/Hermes; optional private Hub sync.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "huggingface",
+          "application_relevant": true
+        },
+        {
+          "title": "Give any model a terminal and files",
+          "date": "2026-09-08",
+          "url": "https://openrouter.ai/blog/announcements/shell-tool/",
+          "tags": [
+            "agents",
+            "product",
+            "workflow"
+          ],
+          "why": "openrouter:shell + Files API beta — hosted Linux shell/files for any model.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "openrouter",
+          "application_relevant": true
+        },
+        {
+          "title": "Modernizing complex legacy code with AI agents",
+          "date": "2026-09-09",
+          "url": "https://mistral.ai/news/legacy-code-modernization/",
+          "tags": [
+            "agents",
+            "use-case",
+            "enterprise",
+            "workflow"
+          ],
+          "why": "Fortran→C++ (40k LOC) with human-gated coder/tester/reviewer agent workflow.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "mistral",
+          "application_relevant": true
+        },
+        {
+          "title": "Run cloud agents on machines you manage",
+          "date": "2026-09-02",
+          "url": "https://cursor.com/blog/self-hosted-machines",
+          "tags": [
+            "agents",
+            "product",
+            "enterprise",
+            "workflow"
+          ],
+          "why": "Product deep-dive: Cloud Agents on self-hosted machines and dynamic team pools.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "cursor-blog",
+          "application_relevant": true
+        },
+        {
+          "title": "Building a Memory-Driven Agent with NVIDIA NemoClaw",
+          "date": "2026-09-04",
+          "url": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+          "tags": [
+            "agents",
+            "workflow",
+            "product"
+          ],
+          "why": "NemoClaw pattern for memory-driven long-horizon agents.",
+          "track": "corp_startup_blog",
+          "category": "applications",
+          "source_id": "nvidia-developer",
+          "application_relevant": true
+        }
+      ]
+    },
+    "model_release_benchmark": {
+      "summary": "GPT-6 Astra is the week’s frontier benchmark drop (computer use/SWE/science; Critical cyber preparedness). Secondary: IBM Granite PatchTST-FM-r2 time-series SOTA on Hugging Face with a commercial-friendly license.",
+      "picks": [
+        {
+          "title": "GPT-6 Astra: A new generation of intelligence",
+          "date": "2026-09-03",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "tags": [
+            "frontier",
+            "benchmark",
+            "api-drop"
+          ],
+          "why": "Frontier GPT-6 Astra: SOTA computer use/SWE/science; API/Azure/Bedrock; Critical cyber preparedness.",
+          "track": "corp_startup_blog",
+          "category": "model_release_benchmark",
+          "source_id": "openai-news",
+          "application_relevant": true
+        },
+        {
+          "title": "IBM releases SOTA Granite Time Series PatchTST-FM-r2 model with commercial-friendly license",
+          "date": "2026-09-09",
+          "url": "https://huggingface.co/blog/ibm-research/ibm-releases-sota-granite-time-series",
+          "tags": [
+            "open-weights",
+            "benchmark"
+          ],
+          "why": "IBM Granite PatchTST-FM-r2 time-series SOTA on Hub with commercial-friendly license.",
+          "track": "corp_startup_blog",
+          "category": "model_release_benchmark",
+          "source_id": "huggingface",
+          "application_relevant": true
+        }
+      ]
+    },
+    "engineering": {
+      "summary": "Serving/infra: Inco’s public-beta inference platform leading Artificial Analysis provider boards; OpenRouter US in-region residency routing; NVIDIA guidance on encode-prefill-decode disaggregation for multimodal serving plus CUDA Rust kernel tracks.",
+      "picks": [
+        {
+          "title": "Inco AI Launches Its Inference Platform, Leading Across Four Open Models on Artificial Analysis",
+          "date": "2026-09-03",
+          "url": "https://inco.ai/blog/inco-platform-aa/",
+          "tags": [
+            "serving",
+            "inference",
+            "infra"
+          ],
+          "why": "Public-beta inference platform; Kimi K3, MiniMax M3, GLM 5.3(+Flash) lead AA provider boards.",
+          "track": "corp_startup_blog",
+          "category": "engineering",
+          "source_id": "inco",
+          "application_relevant": true
+        },
+        {
+          "title": "In-Region Routing: Keep your data in the US or EU",
+          "date": "2026-09-09",
+          "url": "https://openrouter.ai/blog/announcements/us-in-region-routing/",
+          "tags": [
+            "infra",
+            "serving"
+          ],
+          "why": "US in-region routing joins EU; us.openrouter.ai decrypts/serves only in-region providers.",
+          "track": "corp_startup_blog",
+          "category": "engineering",
+          "source_id": "openrouter",
+          "application_relevant": true
+        },
+        {
+          "title": "When to Use Encode-Prefill-Decode Disaggregation to Accelerate Multimodal Model Serving",
+          "date": "2026-09-09",
+          "url": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+          "tags": [
+            "serving",
+            "inference",
+            "optimization"
+          ],
+          "why": "EPD disaggregation with Dynamo for ViT-heavy multimodal serving (up to ~5x TTFT).",
+          "track": "corp_startup_blog",
+          "category": "engineering",
+          "source_id": "nvidia-developer",
+          "application_relevant": true
+        },
+        {
+          "title": "Introducing CUDA Rust: Two Tracks for Writing GPU Kernels",
+          "date": "2026-09-08",
+          "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+          "tags": [
+            "infra",
+            "optimization"
+          ],
+          "why": "Native CUDA Rust tracks for writing GPU kernels.",
+          "track": "corp_startup_blog",
+          "category": "engineering",
+          "source_id": "nvidia-developer",
+          "application_relevant": false
+        }
+      ]
+    },
+    "research": {
+      "summary": "Multi-agent formalization headlines the week—Anthropic’s Lean Fermat’s Last Theorem and OpenAI’s Navier–Stokes Millennium resolution (Lean via Astra)—alongside Google Research’s fruit-fly connectomics milestone.",
+      "picks": [
+        {
+          "title": "Formalizing Fermat's Last Theorem",
+          "date": "2026-09-04",
+          "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+          "tags": [
+            "formalization",
+            "science",
+            "agents"
+          ],
+          "why": "Claude multi-agent harness: first complete Lean-checked FLT (~13M lines, ~11 days).",
+          "track": "corp_startup_blog",
+          "category": "research",
+          "source_id": "anthropic-research",
+          "application_relevant": true
+        },
+        {
+          "title": "On the Navier–Stokes Millennium Prize Problem",
+          "date": "2026-09-08",
+          "url": "https://openai.com/index/navier-stokes-solution/",
+          "tags": [
+            "science",
+            "formalization",
+            "agents"
+          ],
+          "why": "Internal multi-agent system + Lean: singularity for forced NS; Astra used for formalization.",
+          "track": "corp_startup_blog",
+          "category": "research",
+          "source_id": "openai-news",
+          "application_relevant": true
+        },
+        {
+          "title": "A connectomics milestone: Mapping the complete male fruit fly brain",
+          "date": "2026-09-03",
+          "url": "https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/",
+          "tags": [
+            "science"
+          ],
+          "why": "Complete male fruit fly brain connectome mapping milestone.",
+          "track": "corp_startup_blog",
+          "category": "research",
+          "source_id": "google-research",
+          "application_relevant": false
+        }
+      ]
+    },
+    "changelog_bugfix": {
+      "summary": "OpenCode 1.18.29 fixed Codex OAuth GPT-version filtering so gpt-6-astra appears for subscription users—critical for Astra day-0 usability.",
+      "picks": [
+        {
+          "title": "OpenCode v1.18.29",
+          "date": "2026-09-04",
+          "url": "https://opencode.ai/changelog",
+          "tags": [
+            "cli",
+            "bugfix",
+            "models"
+          ],
+          "why": "Codex OAuth recognizes integer GPT versions; gpt-6-astra visibility for subscription users.",
+          "track": "application_changelog",
+          "category": "changelog_bugfix",
+          "source_id": "opencode-changelog",
+          "application_relevant": true
+        }
+      ]
+    }
+  },
+  "sources_with_nothing_in_window": [
+    "allen-ai",
+    "cerebras",
+    "glm-zhipu",
+    "liquid-engineering",
+    "liquid-models",
+    "liquid-research",
+    "meta-ai",
+    "microsoft-ai",
+    "minimax",
+    "openai-publications",
+    "perplexity",
+    "poolside",
+    "qwen",
+    "salesforce"
+  ]
+}

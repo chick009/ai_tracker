@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Tracker · Top 10 · 2026-10-19 (W43)</title>
+<style>
+  :root {
+    --bg: #0f1218;
+    --surface: #171b24;
+    --surface-soft: #1c212c;
+    --border: #2a3140;
+    --border-soft: #232936;
+    --text: #e8eaf0;
+    --muted: #9aa3b5;
+    --faint: #6b7385;
+    --accent: #7eb6ff;
+    --accent-dim: #4a7ab8;
+    --rank: #c9d4e8;
+    --p0: #ff8a65;
+    --p2: #8b95a8;
+    --lane-build: #5eead4;
+    --lane-act: #fbbf24;
+    --lane-learn: #a78bfa;
+    --lane-watch: #94a3b8;
+    --radar-bg: #141820;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans TC",
+      "PingFang TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.55;
+    font-size: 15.5px;
+  }
+  .wrap {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+    line-height: 1.25;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  .meta span { color: var(--faint); }
+  .synthesis {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    margin-bottom: 2rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+  .synthesis p { margin: 0 0 0.75rem; }
+  .synthesis p:last-child { margin-bottom: 0; }
+  .synthesis strong { color: var(--text); font-weight: 600; }
+  h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0 0 1rem;
+    color: var(--text);
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  h2 .count {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--faint);
+  }
+  .cards { display: flex; flex-direction: column; gap: 0.85rem; }
+  article.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem 1.05rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.85rem 0.95rem;
+  }
+  .rank {
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 8px;
+    background: var(--surface-soft);
+    border: 1px solid var(--border);
+    color: var(--rank);
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-variant-numeric: tabular-nums;
+  }
+  .card-body { min-width: 0; }
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.55rem;
+    margin-bottom: 0.45rem;
+  }
+  .card-head a.title {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 650;
+    font-size: 1.05rem;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid transparent;
+  }
+  .card-head a.title:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent-dim);
+  }
+  .chip {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    line-height: 1.3;
+  }
+  .chip.lane-Build { color: var(--lane-build); background: rgba(94,234,212,0.1); border-color: rgba(94,234,212,0.28); }
+  .chip.lane-Act { color: var(--lane-act); background: rgba(251,191,36,0.1); border-color: rgba(251,191,36,0.28); }
+  .chip.lane-Learn { color: var(--lane-learn); background: rgba(167,139,250,0.12); border-color: rgba(167,139,250,0.3); }
+  .chip.lane-Watch { color: var(--lane-watch); background: rgba(148,163,184,0.1); border-color: rgba(148,163,184,0.28); }
+  .chip.priority {
+    color: var(--p0);
+    background: rgba(255,138,101,0.1);
+    border-color: rgba(255,138,101,0.3);
+  }
+  .chip.priority.p2 {
+    color: var(--p2);
+    background: rgba(139,149,168,0.1);
+    border-color: rgba(139,149,168,0.28);
+  }
+  .takeaway {
+    margin: 0 0 0.55rem;
+    color: var(--text);
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .takeaway code, .takeaway strong {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    font-weight: 600;
+    color: #d4dff0;
+  }
+  .source {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--faint);
+  }
+  .source a {
+    color: var(--accent-dim);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .source a:hover { color: var(--accent); text-decoration: underline; }
+
+  section.radar {
+    margin-top: 2.25rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+  }
+  section.radar h2 { color: var(--muted); font-weight: 600; }
+  section.radar .card {
+    background: var(--radar-bg);
+    border-color: var(--border-soft);
+    opacity: 0.95;
+  }
+  section.radar .rank {
+    background: transparent;
+    border-style: dashed;
+    color: var(--faint);
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: auto;
+    min-width: 2.1rem;
+    padding: 0 0.35rem;
+    height: 2rem;
+  }
+  section.radar .card-head a.title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    color: #c5cad6;
+  }
+  section.radar .takeaway { color: var(--muted); font-size: 0.88rem; }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-soft);
+    color: var(--faint);
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  @media (max-width: 520px) {
+    .wrap { padding: 1.25rem 0.9rem 2rem; }
+    h1 { font-size: 1.35rem; }
+    article.card { grid-template-columns: 1fr; gap: 0.5rem; }
+    .rank { width: 1.85rem; height: 1.85rem; font-size: 0.85rem; }
+  }
+
+  @media print {
+    :root {
+      --bg: #fff;
+      --surface: #fff;
+      --surface-soft: #f4f5f7;
+      --border: #ccc;
+      --border-soft: #ddd;
+      --text: #111;
+      --muted: #333;
+      --faint: #555;
+      --accent: #0645ad;
+      --accent-dim: #0645ad;
+      --rank: #111;
+      --radar-bg: #fafafa;
+    }
+    body { background: #fff; color: #111; font-size: 11pt; }
+    .wrap { max-width: none; padding: 0.5in; }
+    article.card, .synthesis {
+      break-inside: avoid;
+      box-shadow: none;
+      border-color: #ccc;
+    }
+    a { color: #0645ad; }
+    .chip { border-color: #999 !important; color: #222 !important; background: #f0f0f0 !important; }
+  }
+
+  .downstream {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+  }
+  .downstream .dl-label {
+    font-size: 0.7rem;
+    font-weight: 650;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.45rem;
+  }
+  .downstream ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .downstream li {
+    color: var(--muted);
+    line-height: 1.45;
+  }
+  .downstream li a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .downstream li a:hover { text-decoration: underline; }
+  .downstream .muted-note {
+    color: var(--faint);
+    margin: 0.45rem 0 0;
+    font-size: 0.8rem;
+  }
+  .card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.5rem;
+    margin: 0.45rem 0 0.35rem;
+  }
+  a.link-chip {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.18rem 0.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 1px solid rgba(126,182,255,0.28);
+    color: var(--accent);
+    background: rgba(126,182,255,0.08);
+    line-height: 1.3;
+  }
+  a.link-chip:hover {
+    background: rgba(126,182,255,0.16);
+    border-color: var(--accent-dim);
+  }
+  a.link-chip.paper-gen {
+    color: #c4b5fd;
+    border-color: rgba(167,139,250,0.35);
+    background: rgba(167,139,250,0.1);
+  }
+  a.link-chip.paper-gen:hover {
+    background: rgba(167,139,250,0.18);
+  }
+  a.link-chip.pplx {
+    color: #86efac;
+    border-color: rgba(134,239,172,0.3);
+    background: rgba(134,239,172,0.08);
+  }
+  a.link-chip.pplx:hover {
+    background: rgba(134,239,172,0.15);
+  }
+  footer .future-note {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--faint);
+    font-size: 0.72rem;
+  }
+  @media print {
+    .downstream { border-color: #ccc; }
+    a.link-chip { color: #0645ad !important; border-color: #999 !important; background: #f0f0f0 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <p class="eyebrow">AI Tracker · Daily digest</p>
+  <h1>Top 10 · 2026-10-19（W43）</h1>
+  <p class="meta">week_start <span>2026-10-19</span> · Asia/Hong_Kong · HF issue 2026-10-16 · GitHub snapshot 06:48 HKT</p>
+</header>
+
+<div class="downstream">
+  <p class="dl-label">Downstream chips</p>
+  <ul>
+    <li><strong>paper-gen</strong>（4／4 awaiting_approval）</li>
+    <li><strong>OpenGCUA: Toward a Fully Open Stack for Generalist Computer Use</strong> — <code>8cedc408-eb28-4be7-815f-530ff8bd5cee</code> · awaiting_approval · <a href="https://johnny-yik.com/admin/papers/queue/8cedc408-eb28-4be7-815f-530ff8bd5cee" target="_blank">queue</a></li><li><strong>Waypoint-OPD: Transferring RL-Induced Policy Shifts via Gated On-Policy Distillation</strong> — <code>6cca1dbb-2c4d-4e94-ba6e-16328133f372</code> · awaiting_approval · <a href="https://johnny-yik.com/admin/papers/queue/6cca1dbb-2c4d-4e94-ba6e-16328133f372" target="_blank">queue</a></li><li><strong>Self-Evolving Agent Harness</strong> — <code>597a8f71-c582-435d-a316-58f0ae45ce01</code> · awaiting_approval · <a href="https://johnny-yik.com/admin/papers/queue/597a8f71-c582-435d-a316-58f0ae45ce01" target="_blank">queue</a></li><li><strong>FDE-Gym: The Last Mile of AI Delivery</strong> — <code>546a2d39-d4e3-40af-ad9e-9cfe066053a2</code> · awaiting_approval · <a href="https://johnny-yik.com/admin/papers/queue/546a2d39-d4e3-40af-ad9e-9cfe066053a2" target="_blank">queue</a></li>
+    <li><strong>Perplexity</strong> — session UNAVAILABLE（executor 無 browser subagent）；primary-source TL;DR：<code>perplexity-answer.md</code></li>
+    <li><strong>GitHub SYSTEM_DESIGN / CloudAgent</strong> — <code>none</code>（Top10 無 github.com）</li>
+    <li><strong>cards ingest</strong> — 21× HTTP 200 · <strong>week</strong> — HTTP 200</li>
+    <li><strong>Notion</strong> — Papers 7 · Applicational 7 · Model&amp;IDE 6 · GitHub 1 · total 21</li>
+  </ul>
+  <p class="muted-note">Prefer Blog/X URLs over Perplexity on version conflicts. Do not repost Top 10.</p>
+</div>
+
+<div class="synthesis">
+  <p>W43 開周（10-19）：主線係 agent memory／computer-use 開源 stack／harness 自演化／最後一哩交付評測，加上開源 frontier MoE 同 coding-agent 基建。Top10：Hy-Memory（Tencent 3B-active memory writer，跨 harness 打贏 Opus 5）；OpenGCUA（Tongyi-MAI 全開源 GCUA，OSWorld-v2 +19.6／步數 −53%）；Waypoint-OPD（waypoint gated OPD）；Cursor Canvases＋Environments API（300 repos、5× 載入）；Self-Evolving Agent Harness（權重固定＋PAC admission）；Memorilla（16 latent tokens，source −108×）；FDE-Gym（95 題 mean 0.56／resolve 14）；Beam（501B／23B、1M ctx、Apache 2.0）；NVIDIA midtraining（SWE-ML 55.8→62.8）；JevAgentHarness（4B decision 代 routine tool）。Radar：MAI-Gym（9B GUI SOTA &lt;10B）；MJev-Spatial；Data World／DABstep +20.9；LangChain Managed Deep Agents（sandbox 外 token）；MAI-Code-1.1-Flash（¼ 成本）；OpenCode 2.0.32／Claude 2.1.302；AMD MI355X+vLLM claim；ai-memory；3DCodeVerse；Google wet-lab。實務 takeaway：記憶寫入可專模；computer-use 要開源 harness＋code execution；評測下沉到未言明約束同 harness 自演化理論。GitHub SYSTEM_DESIGN：none（Top10 無 github.com）。</p>
+</div>
+
+<section>
+  <h2>Top 10 <span class="count">10</span></h2>
+  <div class="cards">
+<article class="card">
+  <div class="rank">1</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://x.com/dair_ai/status/2111525163447746719" target="_blank" rel="noopener">Hy-Memory</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">Hy-Memory（Tencent Hunyuan）：專職 agent 長期記憶寫入嘅 30B-A3B（3B active）——決定存咩、點寫、點用新證據更新舊記憶；on-policy distillation＋RL，跨 Mem0／MemOS／多 harness 寫記憶質素打贏 Claude Opus 5。限制：公開帖未報完整 benchmark 表同延遲／成本。</p>
+    <p class="source">X / DAIR.AI · <a href="https://x.com/dair_ai/status/2111525163447746719" target="_blank" rel="noopener">https://x.com/dair_ai/status/2111525163447746719</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">2</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.22200" target="_blank" rel="noopener">OpenGCUA</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">OpenGCUA（Tongyi-MAI）：通才 computer-use 全開源 stack——視覺＋程式介面、code execution、harness→model decision transfer。OSWorld-v2 八模平均 partial <strong>+19.6</strong>、步數相對 batched GUI-only <strong>−53%</strong>；另有 macOS real-device harness／cross-device SDK。限制：real-device 樣本少；Qwen3.8-Max 推理 token 可達 Astra <strong>19.4×</strong>。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.22200" target="_blank" rel="noopener">https://huggingface.co/papers/2610.22200</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">3</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.21601" target="_blank" rel="noopener">Waypoint-OPD</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">Waypoint-OPD：用同一 RL run 嘅中途 teacher checkpoint，比較 early／late policy shift 方向一致性，再 gated 端點 OPD（僅多一次 frozen scoring）。Qwen3-4B teacher → 8B／14B／30B-A3B 六組 domain×student 均最高；shuffle gate 數學分數跌穿 no-gate。限制：waypoint 位置敏感度低但未報 AIME24 留出；更早／多 waypoint 未測。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.21601" target="_blank" rel="noopener">https://huggingface.co/papers/2610.21601</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">4</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://cursor.com/changelog/cloud-agent-canvases-and-environments" target="_blank" rel="noopener">Cursor Canvases + Environments</a>
+      <span class="chip lane-Act">Act</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">Cursor Canvases＋Environments：cloud agents 可產出 interactive canvas 並以連結分享；Environments API（beta）程式化建立／管理環境；單一環境最多 <strong>300</strong> repos，大環境載入 <strong>5×</strong> 快。限制：API 仍 beta；canvas 內容格式／權限模型細節未入公開 changelog。</p>
+    <p class="source">Cursor / Blog · <a href="https://cursor.com/changelog/cloud-agent-canvases-and-environments" target="_blank" rel="noopener">https://cursor.com/changelog/cloud-agent-canvases-and-environments</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">5</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.18813" target="_blank" rel="noopener">Self-Evolving Agent Harness</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">Self-Evolving Agent Harness：形式化「權重固定、scaffolding 自演化」——prompts／memory／workflows／tools／plugins；分開 proposal 同 admission，並用 continual PAC 給 generalization／retention／admission 界。66 頁＋Harness-RSI code。限制：理論假設強；部署仍要獨立驗證同權限閘。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.18813" target="_blank" rel="noopener">https://huggingface.co/papers/2610.18813</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">6</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://x.com/omarsar0/status/2111879742454665582" target="_blank" rel="noopener">Memorilla</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">Memorilla：文件編碼成 <strong>16</strong> 個 latent memory tokens，FactKG 打贏 full-context，source tokens 少 <strong>108×</strong>；亦可作 agent memory。限制：公開帖未完整列其他 bench／延遲；latent 可解釋性同更新策略未詳。</p>
+    <p class="source">X / omarsar0 · <a href="https://x.com/omarsar0/status/2111879742454665582" target="_blank" rel="noopener">https://x.com/omarsar0/status/2111879742454665582</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">7</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.22350" target="_blank" rel="noopener">FDE-Gym</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">FDE-Gym：95 題「最後一哩」交付（20 場景／18 行業）——模糊需求、live 系統、未言明約束；分數＝客戶 KPI uplift（0–1）扣 stakeholder 成本。最佳配置 mean <strong>0.56</strong>、僅 resolve <strong>14／95</strong>；未言明約束係主瓶頸（隱瞞約束可扣 ~0.28）。限制：scripted stakeholder；知道全部 key facts 仍只有 10／23 達 0.8。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.22350" target="_blank" rel="noopener">https://huggingface.co/papers/2610.22350</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">8</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/blog/reflection-beam" target="_blank" rel="noopener">Beam</a>
+      <span class="chip lane-Build">Build</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">Beam（Reflection）：開源 MoE <strong>501B／23B</strong> active、<strong>1M</strong> ctx、Apache 2.0；自帶 Rust harness；day-0 transformers／vLLM／SGLang；OR 約 <strong>$1／$3</strong>（cache <strong>$0.10</strong>）。SWE-bench Verified BF16 <strong>81.6%</strong>；NVFP4 約 280GB。限制：部署記憶體仍要 501B 級；消費級單卡唔夠。</p>
+    <p class="source">Reflection / Hugging Face Blog · <a href="https://huggingface.co/blog/reflection-beam" target="_blank" rel="noopener">https://huggingface.co/blog/reflection-beam</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">9</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://x.com/dair_ai/status/2111452428294144180" target="_blank" rel="noopener">NVIDIA midtraining agentic coding</a>
+      <span class="chip lane-Learn">Learn</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">NVIDIA open midtraining（agentic coding）：SFT 不變、喺 pretrain 同 post-train 之間加 midtrain（256K SE 資料）；Nemotron 3.5 Lightning SWE-bench Multilingual <strong>55.8→62.8</strong>。限制：公開帖未列完整超參同其他 bench；配方適用範圍待核。</p>
+    <p class="source">X / DAIR.AI · <a href="https://x.com/dair_ai/status/2111452428294144180" target="_blank" rel="noopener">https://x.com/dair_ai/status/2111452428294144180</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">10</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://x.com/dair_ai/status/2111496216567742892" target="_blank" rel="noopener">JevAgentHarness</a>
+      <span class="chip lane-Act">Act</span>
+      <span class="chip priority">P0</span>
+    </div>
+    <p class="takeaway">JevAgentHarness：蒸餾開源 <strong>4B</strong> decision model（多數來自 Jev 對 agent 自身 state 嘅答案），喺 harness 內處理 routine tool 選擇——擬合 threshold 後降成本、唔改 outcome，甚至喺該 agent 內打贏 Jev。限制：專 harness 內有效；跨 agent／open-world 泛化未報。</p>
+    <p class="source">X / DAIR.AI · <a href="https://x.com/dair_ai/status/2111496216567742892" target="_blank" rel="noopener">https://x.com/dair_ai/status/2111496216567742892</a></p>
+  </div>
+</article>
+  </div>
+</section>
+
+<section class="radar">
+  <h2>Radar <span class="count">11</span></h2>
+  <div class="cards">
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.20939" target="_blank" rel="noopener">MAI-Gym</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">MAI-Gym：統一 GUI eval／資料／online RL（mobile＋computer＋web）；9B agent MobileWorld <strong>78.4%</strong>、OSWorld-Verified <strong>76.2%</strong>；mocked→真機 28.8→48.1%。限制：Radar；開源 stack 規模大，本地復現成本高。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.20939" target="_blank" rel="noopener">https://huggingface.co/papers/2610.20939</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.22276" target="_blank" rel="noopener">MJev-Spatial</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">MJev-Spatial：用原生 attention matching 做 System One 空間決策，免自回歸文字解碼。限制：Radar；細節待 paper-gen／全文。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.22276" target="_blank" rel="noopener">https://huggingface.co/papers/2610.22276</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://x.com/omarsar0/status/2111936617699332566" target="_blank" rel="noopener">Data World / DABstep</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">Data World：由生成機制產 data-analysis env／tasks／rubrics，再 RL；DABstep-Hard <strong>+20.9</strong>。限制：Radar；機制覆蓋面同洩漏風險未詳。</p>
+    <p class="source">X / omarsar0 · <a href="https://x.com/omarsar0/status/2111936617699332566" target="_blank" rel="noopener">https://x.com/omarsar0/status/2111936617699332566</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://x.com/LangChain/status/2111146976683425860" target="_blank" rel="noopener">LangChain Managed Deep Agents</a>
+      <span class="chip lane-Act">Act</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">LangChain Managed Deep Agents：sandbox 外 proxy 注入 token，agent 永遠睇唔到憑證，只對已允許服務加 header。限制：Radar；惡意套件仍可打其他側信道。</p>
+    <p class="source">X / LangChain · <a href="https://x.com/LangChain/status/2111146976683425860" target="_blank" rel="noopener">https://x.com/LangChain/status/2111146976683425860</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/" target="_blank" rel="noopener">MAI-Code-1.1-Flash</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">MAI-Code-1.1-Flash：相對 1.0 <strong>¼</strong> 成本、token 效率約 <strong>+25%</strong>；Terminal-Bench +22%、.NET +15%；code survival +4%。限制：Radar；頁面無絕對 USD／1M；OR 無 mai-code id。</p>
+    <p class="source">Microsoft AI / Blog · <a href="https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/" target="_blank" rel="noopener">https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://opencode.ai/changelog#v2-0-32" target="_blank" rel="noopener">OpenCode 2.0.32</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">OpenCode 2.0.32：開源 coding agent CLI bump（npm @opencode/cli@2.0.32）。限制：Radar；changelog 與 npm 可能 lag。</p>
+    <p class="source">Blog / OpenCode · <a href="https://opencode.ai/changelog#v2-0-32" target="_blank" rel="noopener">https://opencode.ai/changelog#v2-0-32</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://code.claude.com/docs/en/changelog#2-1-302" target="_blank" rel="noopener">Claude Code 2.1.302</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">Claude Code 2.1.302：Anthropic CLI bump；npm 另見 2.1.303 未入公開 changelog。限制：Radar；changelog 頁面或 lag。</p>
+    <p class="source">Anthropic / Blog · <a href="https://code.claude.com/docs/en/changelog#2-1-302" target="_blank" rel="noopener">https://code.claude.com/docs/en/changelog#2-1-302</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://lnkd.in/p/gpNCUsZt" target="_blank" rel="noopener">AMD MI355X + vLLM</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">AMD MI355X＋vLLM 聲稱 agentic inference 打贏 NVIDIA。限制：Radar；LinkedIn claim，基準／workload 需核實。</p>
+    <p class="source">LinkedIn / Embedded LLM · <a href="https://lnkd.in/p/gpNCUsZt" target="_blank" rel="noopener">https://lnkd.in/p/gpNCUsZt</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">akitaonrails/ai-memory</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">akitaonrails/ai-memory：為 coding CLI 提供長期記憶／session 交接。限制：Radar；未跑 SYSTEM_DESIGN（Top10 無 github.com）。</p>
+    <p class="source">GitHub · <a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener">https://github.com/akitaonrails/ai-memory</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://huggingface.co/papers/2610.22341" target="_blank" rel="noopener">3DCodeVerse</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">3DCodeVerse（USC）：把 3D 世界當可執行 code，畀 coding agents 建造同驗證。限制：Radar。</p>
+    <p class="source">Hugging Face / Papers · <a href="https://huggingface.co/papers/2610.22341" target="_blank" rel="noopener">https://huggingface.co/papers/2610.22341</a></p>
+  </div>
+</article>
+<article class="card">
+  <div class="rank">R</div>
+  <div class="card-body">
+    <div class="card-head">
+      <a class="title" href="https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/" target="_blank" rel="noopener">Google wet-lab agents</a>
+      <span class="chip lane-Watch">Watch</span>
+      <span class="chip priority p2">P2</span>
+    </div>
+    <p class="takeaway">Google wet-lab agents：biological reality grounding／autonomous wet-lab 構件。限制：Radar；垂直研究。</p>
+    <p class="source">Google Research / Blog · <a href="https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/" target="_blank" rel="noopener">https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/</a></p>
+  </div>
+</article>
+  </div>
+</section>
+
+<footer>AI Tracker Orchestrator · 2026-10-19 · generated for Johnny · HTML path for parent DM</footer>
+</div>
+</body>
+</html>

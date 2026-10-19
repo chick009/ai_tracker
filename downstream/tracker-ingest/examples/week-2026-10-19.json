@@ -1,0 +1,10 @@
+{
+ "week_start": "2026-10-19",
+ "synthesis": "W43 開周（10-19）：主線係 agent memory／computer-use 開源 stack／harness 自演化／最後一哩交付評測，加上開源 frontier MoE 同 coding-agent 基建。Top10：Hy-Memory（Tencent 3B-active memory writer，跨 harness 打贏 Opus 5）；OpenGCUA（Tongyi-MAI 全開源 GCUA，OSWorld-v2 +19.6／步數 −53%）；Waypoint-OPD（waypoint gated OPD）；Cursor Canvases＋Environments API（300 repos、5× 載入）；Self-Evolving Agent Harness（權重固定＋PAC admission）；Memorilla（16 latent tokens，source −108×）；FDE-Gym（95 題 mean 0.56／resolve 14）；Beam（501B／23B、1M ctx、Apache 2.0）；NVIDIA midtraining（SWE-ML 55.8→62.8）；JevAgentHarness（4B decision 代 routine tool）。Radar：MAI-Gym（9B GUI SOTA <10B）；MJev-Spatial；Data World／DABstep +20.9；LangChain Managed Deep Agents（sandbox 外 token）；MAI-Code-1.1-Flash（¼ 成本）；OpenCode 2.0.32／Claude 2.1.302；AMD MI355X+vLLM claim；ai-memory；3DCodeVerse；Google wet-lab。實務 takeaway：記憶寫入可專模；computer-use 要開源 harness＋code execution；評測下沉到未言明約束同 harness 自演化理論。GitHub SYSTEM_DESIGN：none（Top10 無 github.com）。",
+ "type_summaries": {
+  "research": "10-19：OpenGCUA；Waypoint-OPD；Self-Evolving Agent Harness；FDE-Gym；Radar MAI-Gym／MJev-Spatial／3DCodeVerse。",
+  "application_case_study": "10-19：Hy-Memory；Memorilla；NVIDIA midtraining；JevAgentHarness；Radar Data World／AMD／ai-memory／wet-lab／LangChain Managed Deep Agents。",
+  "changelog_feature": "10-19：Cursor Canvases＋Environments；Radar OpenCode 2.0.32／Claude Code 2.1.302。",
+  "model_release_implementation": "10-19：Beam；Radar MAI-Code-1.1-Flash。"
+ }
+}

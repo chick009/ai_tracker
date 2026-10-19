@@ -1,0 +1,144 @@
+{
+  "description": "Blog Investigations store. Digest focuses on 6 user orientations (per post).",
+  "digest_categories": {
+    "changelog_features": {
+      "meaning": "Newly supported functionalities that enhance the agent itself",
+      "include": [
+        "worktree",
+        "async questions",
+        "self-hosted execution",
+        "memory tools",
+        "inline Q&A while agent runs",
+        "new agent UX that expands capability"
+      ],
+      "exclude": [
+        "merely adding a model to a picker",
+        "adding effort/thinking levels",
+        "pricing text fixes",
+        "pure bugfixes"
+      ]
+    },
+    "applications": {
+      "meaning": "How applications are used — list concrete usages",
+      "examples": [
+        "memory retrieval",
+        "RAG",
+        "TTS",
+        "legacy modernization agents",
+        "enterprise bots",
+        "data pipelines with coding agents"
+      ]
+    },
+    "engineering": {
+      "meaning": "Engineering work usages — systems/infra techniques",
+      "examples": [
+        "inference optimizations",
+        "sandbox handling",
+        "EPD disaggregation",
+        "region routing",
+        "CUDA/kernel work"
+      ]
+    },
+    "model_release_benchmark": {
+      "meaning": "Proprietary (or closed/frontier) model releases framed by benchmarks",
+      "fields_to_extract": [
+        "benchmark_metrics.cost_efficiency",
+        "benchmark_metrics.performance_vs_sota",
+        "long_agent_harness_support",
+        "application_breakthroughs"
+      ],
+      "cost_efficiency_rules": {
+        "required": [
+          "usd_per_1m_input",
+          "usd_per_1m_output"
+        ],
+        "optional": [
+          "usd_per_1m_cached_input",
+          "usd_per_1m_cache_writes",
+          "long_context_tiers",
+          "batch_flex_fast_tiers"
+        ],
+        "unit": "USD per 1M tokens",
+        "policy": "Prefer official pricing. metrics key is OPTIONAL on cards — omit when unpublished. Never invent. Prefer USD/MTok; if only CNY published, store CNY and note currency.",
+        "required_when_present": [
+          "input",
+          "output",
+          "currency",
+          "unit"
+        ]
+      },
+      "benchmark_comparison_rules": {
+        "attach": "1–2 famous benchmarks with peer comparison (e.g. Claude Opus/Fable vs GPT-6 Astra)",
+        "required_fields": [
+          "benchmark_name",
+          "scores_by_model",
+          "delta_vs_main_peer",
+          "source_url"
+        ],
+        "policy": "Use provider tables or independent leaderboards only. Note harness/version mismatches. Never invent scores."
+      }
+    },
+    "model_release_benchmark_with_implementations": {
+      "meaning": "Model releases that also disclose architecture/implementation details",
+      "fields_to_extract": [
+        "components (Sparse Attention, MLP / Gated Delta Net, MHC, Mamba, …)",
+        "inference_optimizations (speculative decoding, …)",
+        "plus benchmark context when present"
+      ]
+    }
+  },
+  "note": "research / changelog_bugfix / changelog_refactor may still be stored with legacy tags but are out of the primary 6-type digest unless user asks.",
+  "post_fields": {
+    "title": "string",
+    "url": "string",
+    "date": "YYYY-MM-DD or null",
+    "category": "one of the 5 digest categories (changelog_features|applications|engineering|model_release_benchmark|model_release_benchmark_with_implementations) or optional legacy",
+    "tags": "string[]",
+    "summary": "one-line",
+    "orientation": "optional structured notes matching the category's extract fields",
+    "application_relevant": "bool",
+    "first_seen": "YYYY-MM-DD",
+    "last_seen": "YYYY-MM-DD"
+  },
+  "card_schema": {
+    "version": "v1",
+    "metrics_optional": true,
+    "fields": {
+      "id": "string kebab",
+      "title": "string",
+      "url": "string",
+      "source": "string e.g. OpenAI or Cognition / Blog",
+      "published_at": "ISO-8601 UTC preferred",
+      "type": [
+        "research",
+        "engineering",
+        "application_case_study",
+        "model_release_benchmark",
+        "model_release_implementation",
+        "changelog_bugfix",
+        "changelog_feature",
+        "changelog_refactor"
+      ],
+      "priority": [
+        "P0",
+        "P1",
+        "P2",
+        "P3"
+      ],
+      "tags": "string[]",
+      "key_takeaway": "string[] factual bullets",
+      "metrics": "OPTIONAL object {pricing?, benchmarks?} — omit key entirely when unknown; never invent"
+    },
+    "ingest": {
+      "base_url": "https://psmjbqbnkoioicbasqlm.supabase.co/functions/v1",
+      "tracker_cards_ingest": "POST /tracker-cards-ingest — one card body; metrics optional",
+      "tracker_weeks_ingest": "POST /tracker-weeks-ingest — {week_start, synthesis, type_summaries}",
+      "auth": "Authorization: Bearer TRACKER_INGEST_TOKEN"
+    },
+    "storage": {
+      "cards": "cards/<id>.json",
+      "weeks": "weeks/YYYY-MM-DD.json",
+      "weeks_ingest_batch": "weeks/YYYY-MM-DD-cards-ingest.json"
+    }
+  }
+}

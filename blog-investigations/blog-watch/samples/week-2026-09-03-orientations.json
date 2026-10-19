@@ -1,0 +1,208 @@
+{
+  "type": "week_sample_reoriented",
+  "window": "2026-09-03..2026-09-10",
+  "generated_at": "2026-09-11T00:01:13+08:00",
+  "orientations": [
+    "changelog_features",
+    "applications",
+    "engineering",
+    "model_release_benchmark",
+    "model_release_benchmark_with_implementations"
+  ],
+  "note": "User wrote '6 Types' but listed 5 primary orientations; digest uses these 5.",
+  "synthesis": "Astra week: proprietary frontier launch drives app surfaces (Work/Cortex/enterprise bots) and agent product UX, while serving/infra blogs cover routing and multimodal decode paths. Changelog noise of 'added model X' is filtered out; keep only agent-capability features.",
+  "categories": {
+    "changelog_features": {
+      "summary": "True agent-enhancement features this week: Codex worktrees + async mid-run Q&A; Cursor self-hosted machine pools; Claude Code /diff panel and cache-stable mid-session controls. Excluded: Pi/OpenCode/Claude merely adding Astra or Fable to the picker.",
+      "picks": [
+        {
+          "title": "Codex CLI 0.154.0",
+          "date": "2026-09-09",
+          "url": "https://developers.openai.com/codex/changelog",
+          "usages": [
+            "experimental worktrees for isolated sessions",
+            "inline async questions while agent continues",
+            "Windows background Codex server"
+          ],
+          "exclude_note": "Astra-in-picker counted as model add — not the primary feature signal"
+        },
+        {
+          "title": "Self-hosted machines",
+          "date": "2026-09-02",
+          "url": "https://cursor.com/changelog",
+          "usages": [
+            "self-hosted workers/pools",
+            "in-network tool execution",
+            "computer use on managed machines"
+          ]
+        },
+        {
+          "title": "Claude Code changelog (agent UX)",
+          "date": "2026-09-10",
+          "url": "https://code.claude.com/docs/en/changelog",
+          "usages": [
+            "/diff panel beside conversation",
+            "prompt-cache-stable mid-session effort changes",
+            "Remote Control/worktree reliability"
+          ]
+        }
+      ]
+    },
+    "applications": {
+      "summary": "Application usages clustered around enterprise agents, coding-agent memory, multimodal edit, data-pipeline agents, hosted shell, and legacy modernization.",
+      "picks": [
+        {
+          "title": "GPT-6 Astra for work",
+          "date": "2026-09-09",
+          "url": "https://openai.com/index/gpt-6-astra-next-generation-work/",
+          "usages": [
+            "ChatGPT Work professional workflows",
+            "Codex coding agents",
+            "API computer-use / multi-step agents"
+          ]
+        },
+        {
+          "title": "ChatGPT Images 2.5",
+          "date": "2026-09-08",
+          "url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+          "usages": [
+            "image generation/editing",
+            "Sketch/templates",
+            "Images API Flare/Sunburst"
+          ]
+        },
+        {
+          "title": "Grok Bot for Enterprise",
+          "date": "2026-09-03",
+          "url": "https://x.ai/news/grok-bot-for-enterprise",
+          "usages": [
+            "persistent enterprise bots",
+            "org governance/audit",
+            "Routines + tools + artifacts"
+          ]
+        },
+        {
+          "title": "Astra / Grok 4.6 on Snowflake Cortex",
+          "date": "2026-09-09",
+          "url": "https://www.snowflake.com/en/blog/openai-gpt-6-astra-snowflake-cortex-ai/",
+          "usages": [
+            "Cortex Agents",
+            "CoWork",
+            "SQL AI Functions / Inference inside Snowflake"
+          ]
+        },
+        {
+          "title": "CoCo reproducible pipelines",
+          "date": "2026-09-04",
+          "url": "https://www.snowflake.com/en/blog/snowflake-coco-data-engineering/",
+          "usages": [
+            "data engineering agents",
+            "skills/plugins for reproducible pipelines"
+          ]
+        },
+        {
+          "title": "funes",
+          "date": "2026-09-03",
+          "url": "https://huggingface.co/blog/funes",
+          "usages": [
+            "coding-agent memory retrieval",
+            "local-first durable memory for Claude Code/Codex/Pi"
+          ]
+        },
+        {
+          "title": "OpenRouter shell tool",
+          "date": "2026-09-08",
+          "url": "https://openrouter.ai/blog/announcements/shell-tool/",
+          "usages": [
+            "hosted Linux shell for any model",
+            "Files API workspace"
+          ]
+        },
+        {
+          "title": "Mistral legacy modernization",
+          "date": "2026-09-09",
+          "url": "https://mistral.ai/news/legacy-code-modernization/",
+          "usages": [
+            "Fortran→C++ agent team",
+            "coder/tester/reviewer with human gates"
+          ]
+        },
+        {
+          "title": "NVIDIA NemoClaw",
+          "date": "2026-09-04",
+          "url": "https://developer.nvidia.com/blog/building-a-memory-driven-agent-with-nvidia-nemoclaw/",
+          "usages": [
+            "memory-driven long-horizon agents",
+            "agent memory patterns"
+          ]
+        }
+      ]
+    },
+    "engineering": {
+      "summary": "Engineering usages this week center on inference/serving platforms, residency routing, multimodal encode-prefill-decode disaggregation, and CUDA Rust kernel tracks—not app feature marketing.",
+      "picks": [
+        {
+          "title": "Inco inference platform",
+          "date": "2026-09-03",
+          "url": "https://inco.ai/blog/inco-platform-aa/",
+          "usages": [
+            "fleet inference serving",
+            "speculative decoding / quantization stack for open models",
+            "AA provider leaderboard positioning"
+          ]
+        },
+        {
+          "title": "OpenRouter US in-region routing",
+          "date": "2026-09-09",
+          "url": "https://openrouter.ai/blog/announcements/us-in-region-routing/",
+          "usages": [
+            "in-region data residency routing",
+            "US/EU endpoint locality"
+          ]
+        },
+        {
+          "title": "EPD disaggregation for multimodal serving",
+          "date": "2026-09-09",
+          "url": "https://developer.nvidia.com/blog/when-to-use-encode-prefill-decode-disaggregation-to-accelerate-multimodal-model-serving/",
+          "usages": [
+            "encode-prefill-decode disaggregation",
+            "ViT-heavy multimodal TTFT optimization"
+          ]
+        },
+        {
+          "title": "CUDA Rust",
+          "date": "2026-09-08",
+          "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+          "usages": [
+            "GPU kernel authoring in Rust",
+            "two CUDA Rust tracks"
+          ]
+        }
+      ]
+    },
+    "model_release_benchmark": {
+      "summary": "Primary proprietary drop is GPT-6 Astra. Focus extract: cost-efficiency claims for work/coding, performance vs prior SOTA on agent/computer-use/SWE-style evals, and long-agent harness readiness (computer use, multi-step tools). Granite time-series is open-weight SOTA—not proprietary; listed only as secondary benchmark note if useful.",
+      "picks": [
+        {
+          "title": "GPT-6 Astra",
+          "date": "2026-09-03",
+          "url": "https://openai.com/index/gpt-6-astra/",
+          "benchmark_metrics": {
+            "cost_efficiency": "Positioned for professional/coding work with improved cost-efficiency vs prior frontier tiers (see Work launch companion).",
+            "performance_vs_sota": "Frontier claims on computer use, coding/SWE-style, and science/agent workloads; Critical cyber preparedness framing."
+          },
+          "long_agent_harness": "Built for multi-step agents: computer use, tool calling, Codex/Work long-running tasks, async clarification patterns in Codex.",
+          "application_breakthroughs": [
+            "computer-use agents",
+            "professional Work workflows",
+            "Codex coding agents at frontier"
+          ]
+        }
+      ]
+    },
+    "model_release_benchmark_with_implementations": {
+      "summary": "Thin in this exact window for true arch+benchmark model cards (Sparse Attention / Gated Delta Net / Mamba-style disclosures). Closest in-window implementation-heavy serving notes sit under engineering (Inco speculative decoding stack; NVIDIA EPD). No verified in-window post fully matches 'benchmark + component breakdown' like MHC/Mamba; leave sparse rather than invent.",
+      "picks": []
+    }
+  }
+}

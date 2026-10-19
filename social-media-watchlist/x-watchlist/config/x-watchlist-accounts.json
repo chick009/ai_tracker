@@ -1,0 +1,702 @@
+[
+  {
+    "id": "1",
+    "name": "Cursor (Anysphere)",
+    "username": "cursor_ai",
+    "tier": "daily",
+    "x_url": "https://x.com/cursor_ai"
+  },
+  {
+    "id": "2",
+    "name": "Logan Kilpatrick",
+    "username": "OfficialLoganK",
+    "tier": "daily",
+    "x_url": "https://x.com/OfficialLoganK"
+  },
+  {
+    "id": "3",
+    "name": "matt palmer (@mattyp)",
+    "username": "mattyp",
+    "tier": "daily",
+    "x_url": "https://x.com/mattyp"
+  },
+  {
+    "id": "4",
+    "name": "Shu Ding",
+    "username": "shuding",
+    "tier": "daily",
+    "x_url": "https://x.com/shuding"
+  },
+  {
+    "id": "5",
+    "name": "Simon Willison",
+    "username": "simonw",
+    "tier": "daily",
+    "x_url": "https://x.com/simonw"
+  },
+  {
+    "id": "6",
+    "name": "Alex Albert",
+    "username": "alexalbert__",
+    "tier": "regular",
+    "x_url": "https://x.com/alexalbert__"
+  },
+  {
+    "id": "7",
+    "name": "Boris Cherny",
+    "username": "bcherny",
+    "tier": "regular",
+    "x_url": "https://x.com/bcherny"
+  },
+  {
+    "id": "8",
+    "name": "Cognition (Devin)",
+    "username": "cognition",
+    "tier": "regular",
+    "x_url": "https://x.com/cognition"
+  },
+  {
+    "id": "9",
+    "name": "Dan Shipper (Every)",
+    "username": "danshipper",
+    "tier": "regular",
+    "x_url": "https://x.com/danshipper"
+  },
+  {
+    "id": "10",
+    "name": "fal",
+    "username": "fal",
+    "tier": "regular",
+    "x_url": "https://x.com/fal"
+  },
+  {
+    "id": "11",
+    "name": "Guillermo Rauch",
+    "username": "rauchg",
+    "tier": "regular",
+    "x_url": "https://x.com/rauchg"
+  },
+  {
+    "id": "12",
+    "name": "Pieter Levels",
+    "username": "levelsio",
+    "tier": "regular",
+    "x_url": "https://x.com/levelsio"
+  },
+  {
+    "id": "13",
+    "name": "Runway",
+    "username": "runwayml",
+    "tier": "regular",
+    "x_url": "https://x.com/runwayml"
+  },
+  {
+    "id": "14",
+    "name": "Vercel",
+    "username": "vercel",
+    "tier": "regular",
+    "x_url": "https://x.com/vercel"
+  },
+  {
+    "id": "15",
+    "name": "Cohere",
+    "username": "cohere",
+    "tier": "discovery",
+    "x_url": "https://x.com/cohere"
+  },
+  {
+    "id": "16",
+    "name": "Luma AI",
+    "username": "LumaLabsAI",
+    "tier": "discovery",
+    "x_url": "https://x.com/LumaLabsAI"
+  },
+  {
+    "id": "17",
+    "name": "Matt Shumer",
+    "username": "mattshumer_",
+    "tier": "discovery",
+    "x_url": "https://x.com/mattshumer_"
+  },
+  {
+    "id": "18",
+    "name": "Modal",
+    "username": "modal",
+    "tier": "discovery",
+    "x_url": "https://x.com/modal"
+  },
+  {
+    "id": "19",
+    "name": "Replicate",
+    "username": "replicate",
+    "tier": "discovery",
+    "x_url": "https://x.com/replicate"
+  },
+  {
+    "id": "20",
+    "name": "Riley Brown",
+    "username": "rileybrown_ai",
+    "tier": "discovery",
+    "x_url": "https://x.com/rileybrown_ai"
+  },
+  {
+    "id": "21",
+    "name": "Artificial Analysis",
+    "username": "ArtificialAnlys",
+    "tier": "daily",
+    "x_url": "https://x.com/ArtificialAnlys"
+  },
+  {
+    "id": "22",
+    "name": "Allie K. Miller",
+    "username": "alliekmiller",
+    "tier": "regular",
+    "x_url": "https://x.com/alliekmiller"
+  },
+  {
+    "id": "23",
+    "name": "Andrew Ng",
+    "username": "AndrewYNg",
+    "tier": "regular",
+    "x_url": "https://x.com/AndrewYNg"
+  },
+  {
+    "id": "24",
+    "name": "Arena.ai (Chatbot Arena)",
+    "username": "arena",
+    "tier": "regular",
+    "x_url": "https://x.com/arena"
+  },
+  {
+    "id": "25",
+    "name": "DeepLearning.AI",
+    "username": "DeepLearningAI",
+    "tier": "regular",
+    "x_url": "https://x.com/DeepLearningAI"
+  },
+  {
+    "id": "26",
+    "name": "Epoch AI",
+    "username": "EpochAIResearch",
+    "tier": "regular",
+    "x_url": "https://x.com/EpochAIResearch"
+  },
+  {
+    "id": "27",
+    "name": "Ethan Mollick",
+    "username": "emollick",
+    "tier": "regular",
+    "x_url": "https://x.com/emollick"
+  },
+  {
+    "id": "28",
+    "name": "Jack Clark (Import AI)",
+    "username": "jackclarkSF",
+    "tier": "regular",
+    "x_url": "https://x.com/jackclarkSF"
+  },
+  {
+    "id": "29",
+    "name": "Jay Alammar",
+    "username": "JayAlammar",
+    "tier": "regular",
+    "x_url": "https://x.com/JayAlammar"
+  },
+  {
+    "id": "30",
+    "name": "Jeremy Howard",
+    "username": "jeremyphoward",
+    "tier": "regular",
+    "x_url": "https://x.com/jeremyphoward"
+  },
+  {
+    "id": "31",
+    "name": "Latent Space",
+    "username": "latentspacepod",
+    "tier": "regular",
+    "x_url": "https://x.com/latentspacepod"
+  },
+  {
+    "id": "32",
+    "name": "Peter Yang",
+    "username": "petergyang",
+    "tier": "regular",
+    "x_url": "https://x.com/petergyang"
+  },
+  {
+    "id": "34",
+    "name": "Rowan Cheung",
+    "username": "rowancheung",
+    "tier": "discovery",
+    "x_url": "https://x.com/rowancheung"
+  },
+  {
+    "id": "36",
+    "name": "Elvis Saravia",
+    "username": "omarsar0",
+    "tier": "daily",
+    "x_url": "https://x.com/omarsar0"
+  },
+  {
+    "id": "37",
+    "name": "Hamel Husain",
+    "username": "HamelHusain",
+    "tier": "daily",
+    "x_url": "https://x.com/HamelHusain"
+  },
+  {
+    "id": "38",
+    "name": "Harrison Chase",
+    "username": "hwchase17",
+    "tier": "daily",
+    "x_url": "https://x.com/hwchase17"
+  },
+  {
+    "id": "39",
+    "name": "LangChain",
+    "username": "LangChain",
+    "tier": "daily",
+    "x_url": "https://x.com/LangChain"
+  },
+  {
+    "id": "40",
+    "name": "Philipp Schmid",
+    "username": "_philschmid",
+    "tier": "daily",
+    "x_url": "https://x.com/_philschmid"
+  },
+  {
+    "id": "41",
+    "name": "swyx (Shawn Wang)",
+    "username": "swyx",
+    "tier": "daily",
+    "x_url": "https://x.com/swyx"
+  },
+  {
+    "id": "42",
+    "name": "Arize AI",
+    "username": "arizeai",
+    "tier": "regular",
+    "x_url": "https://x.com/arizeai"
+  },
+  {
+    "id": "43",
+    "name": "Chip Huyen",
+    "username": "chipro",
+    "tier": "regular",
+    "x_url": "https://x.com/chipro"
+  },
+  {
+    "id": "44",
+    "name": "DAIR.AI",
+    "username": "dair_ai",
+    "tier": "regular",
+    "x_url": "https://x.com/dair_ai"
+  },
+  {
+    "id": "45",
+    "name": "David Soria Parra",
+    "username": "dsp_",
+    "tier": "regular",
+    "x_url": "https://x.com/dsp_"
+  },
+  {
+    "id": "46",
+    "name": "Eugene Yan",
+    "username": "eugeneyan",
+    "tier": "regular",
+    "x_url": "https://x.com/eugeneyan"
+  },
+  {
+    "id": "47",
+    "name": "Jason Liu",
+    "username": "jxnlco",
+    "tier": "regular",
+    "x_url": "https://x.com/jxnlco"
+  },
+  {
+    "id": "48",
+    "name": "Jerry Liu",
+    "username": "jerryjliu0",
+    "tier": "regular",
+    "x_url": "https://x.com/jerryjliu0"
+  },
+  {
+    "id": "49",
+    "name": "Lilian Weng",
+    "username": "lilianweng",
+    "tier": "regular",
+    "x_url": "https://x.com/lilianweng"
+  },
+  {
+    "id": "50",
+    "name": "LlamaIndex",
+    "username": "llama_index",
+    "tier": "regular",
+    "x_url": "https://x.com/llama_index"
+  },
+  {
+    "id": "51",
+    "name": "Omar Khattab",
+    "username": "lateinteraction",
+    "tier": "regular",
+    "x_url": "https://x.com/lateinteraction"
+  },
+  {
+    "id": "52",
+    "name": "Shreya Shankar",
+    "username": "sh_reya",
+    "tier": "regular",
+    "x_url": "https://x.com/sh_reya"
+  },
+  {
+    "id": "53",
+    "name": "Shunyu Yao",
+    "username": "ShunyuYao12",
+    "tier": "discovery",
+    "x_url": "https://x.com/ShunyuYao12"
+  },
+  {
+    "id": "54",
+    "name": "Andrej Karpathy",
+    "username": "karpathy",
+    "tier": "daily",
+    "x_url": "https://x.com/karpathy"
+  },
+  {
+    "id": "55",
+    "name": "Nathan Lambert",
+    "username": "natolambert",
+    "tier": "daily",
+    "x_url": "https://x.com/natolambert"
+  },
+  {
+    "id": "56",
+    "name": "Sebastian Raschka",
+    "username": "rasbt",
+    "tier": "daily",
+    "x_url": "https://x.com/rasbt"
+  },
+  {
+    "id": "57",
+    "name": "Albert Gu",
+    "username": "_albertgu",
+    "tier": "regular",
+    "x_url": "https://x.com/_albertgu"
+  },
+  {
+    "id": "58",
+    "name": "Daniel Han",
+    "username": "danielhanchen",
+    "tier": "regular",
+    "x_url": "https://x.com/danielhanchen"
+  },
+  {
+    "id": "59",
+    "name": "Georgi Gerganov",
+    "username": "ggerganov",
+    "tier": "regular",
+    "x_url": "https://x.com/ggerganov"
+  },
+  {
+    "id": "60",
+    "name": "Horace He",
+    "username": "cHHillee",
+    "tier": "regular",
+    "x_url": "https://x.com/cHHillee"
+  },
+  {
+    "id": "61",
+    "name": "Leandro von Werra",
+    "username": "lvwerra",
+    "tier": "regular",
+    "x_url": "https://x.com/lvwerra"
+  },
+  {
+    "id": "62",
+    "name": "Lewis Tunstall",
+    "username": "_lewtun",
+    "tier": "regular",
+    "x_url": "https://x.com/_lewtun"
+  },
+  {
+    "id": "63",
+    "name": "LMSYS Org",
+    "username": "lmsysorg",
+    "tier": "regular",
+    "x_url": "https://x.com/lmsysorg"
+  },
+  {
+    "id": "64",
+    "name": "Maxime Labonne",
+    "username": "maximelabonne",
+    "tier": "regular",
+    "x_url": "https://x.com/maximelabonne"
+  },
+  {
+    "id": "65",
+    "name": "PyTorch",
+    "username": "PyTorch",
+    "tier": "regular",
+    "x_url": "https://x.com/PyTorch"
+  },
+  {
+    "id": "66",
+    "name": "Soumith Chintala",
+    "username": "soumithchintala",
+    "tier": "regular",
+    "x_url": "https://x.com/soumithchintala"
+  },
+  {
+    "id": "67",
+    "name": "Thomas Wolf",
+    "username": "Thom_Wolf",
+    "tier": "regular",
+    "x_url": "https://x.com/Thom_Wolf"
+  },
+  {
+    "id": "68",
+    "name": "Tim Dettmers",
+    "username": "Tim_Dettmers",
+    "tier": "regular",
+    "x_url": "https://x.com/Tim_Dettmers"
+  },
+  {
+    "id": "69",
+    "name": "Tri Dao",
+    "username": "tri_dao",
+    "tier": "regular",
+    "x_url": "https://x.com/tri_dao"
+  },
+  {
+    "id": "70",
+    "name": "vLLM",
+    "username": "vllm_project",
+    "tier": "regular",
+    "x_url": "https://x.com/vllm_project"
+  },
+  {
+    "id": "71",
+    "name": "NVIDIA AI",
+    "username": "NVIDIAAI",
+    "tier": "discovery",
+    "x_url": "https://x.com/NVIDIAAI"
+  },
+  {
+    "id": "72",
+    "name": "Sayak Paul",
+    "username": "RisingSayak",
+    "tier": "discovery",
+    "x_url": "https://x.com/RisingSayak"
+  },
+  {
+    "id": "73",
+    "name": "Together AI",
+    "username": "togethercompute",
+    "tier": "discovery",
+    "x_url": "https://x.com/togethercompute"
+  },
+  {
+    "id": "74",
+    "name": "ARC Prize",
+    "username": "arcprize",
+    "tier": "regular",
+    "x_url": "https://x.com/arcprize"
+  },
+  {
+    "id": "75",
+    "name": "Chelsea Finn",
+    "username": "chelseabfinn",
+    "tier": "regular",
+    "x_url": "https://x.com/chelseabfinn"
+  },
+  {
+    "id": "76",
+    "name": "Denny Zhou",
+    "username": "denny_zhou",
+    "tier": "regular",
+    "x_url": "https://x.com/denny_zhou"
+  },
+  {
+    "id": "77",
+    "name": "Fei-Fei Li",
+    "username": "drfeifei",
+    "tier": "regular",
+    "x_url": "https://x.com/drfeifei"
+  },
+  {
+    "id": "78",
+    "name": "François Chollet",
+    "username": "fchollet",
+    "tier": "regular",
+    "x_url": "https://x.com/fchollet"
+  },
+  {
+    "id": "79",
+    "name": "Jim Fan",
+    "username": "DrJimFan",
+    "tier": "regular",
+    "x_url": "https://x.com/DrJimFan"
+  },
+  {
+    "id": "80",
+    "name": "LeRobot (Hugging Face)",
+    "username": "LeRobotHF",
+    "tier": "regular",
+    "x_url": "https://x.com/LeRobotHF"
+  },
+  {
+    "id": "81",
+    "name": "METR",
+    "username": "METR_Evals",
+    "tier": "regular",
+    "x_url": "https://x.com/METR_Evals"
+  },
+  {
+    "id": "82",
+    "name": "Noam Brown",
+    "username": "polynoamial",
+    "tier": "regular",
+    "x_url": "https://x.com/polynoamial"
+  },
+  {
+    "id": "83",
+    "name": "Sergey Levine",
+    "username": "svlevine",
+    "tier": "regular",
+    "x_url": "https://x.com/svlevine"
+  },
+  {
+    "id": "84",
+    "name": "Jason Wei",
+    "username": "_jasonwei",
+    "tier": "discovery",
+    "x_url": "https://x.com/_jasonwei"
+  },
+  {
+    "id": "85",
+    "name": "MIT CSAIL",
+    "username": "MIT_CSAIL",
+    "tier": "discovery",
+    "x_url": "https://x.com/MIT_CSAIL"
+  },
+  {
+    "id": "86",
+    "name": "Physical Intelligence",
+    "username": "physical_int",
+    "tier": "discovery",
+    "x_url": "https://x.com/physical_int"
+  },
+  {
+    "id": "87",
+    "name": "Skild AI",
+    "username": "SkildAI",
+    "tier": "discovery",
+    "x_url": "https://x.com/SkildAI"
+  },
+  {
+    "id": "88",
+    "name": "Stanford HAI",
+    "username": "StanfordHAI",
+    "tier": "discovery",
+    "x_url": "https://x.com/StanfordHAI"
+  },
+  {
+    "id": "89",
+    "name": "World Labs",
+    "username": "theworldlabs",
+    "tier": "discovery",
+    "x_url": "https://x.com/theworldlabs"
+  },
+  {
+    "id": "90",
+    "name": "Anthropic",
+    "username": "AnthropicAI",
+    "tier": "daily",
+    "x_url": "https://x.com/AnthropicAI"
+  },
+  {
+    "id": "91",
+    "name": "Google DeepMind",
+    "username": "GoogleDeepMind",
+    "tier": "daily",
+    "x_url": "https://x.com/GoogleDeepMind"
+  },
+  {
+    "id": "92",
+    "name": "Hugging Face",
+    "username": "huggingface",
+    "tier": "daily",
+    "x_url": "https://x.com/huggingface"
+  },
+  {
+    "id": "93",
+    "name": "OpenAI",
+    "username": "OpenAI",
+    "tier": "daily",
+    "x_url": "https://x.com/OpenAI"
+  },
+  {
+    "id": "94",
+    "name": "OpenAI Developers",
+    "username": "OpenAIDevs",
+    "tier": "daily",
+    "x_url": "https://x.com/OpenAIDevs"
+  },
+  {
+    "id": "95",
+    "name": "AI at Meta",
+    "username": "AIatMeta",
+    "tier": "regular",
+    "x_url": "https://x.com/AIatMeta"
+  },
+  {
+    "id": "96",
+    "name": "Ai2 (Allen Institute for AI)",
+    "username": "allen_ai",
+    "tier": "regular",
+    "x_url": "https://x.com/allen_ai"
+  },
+  {
+    "id": "97",
+    "name": "DeepSeek",
+    "username": "deepseek_ai",
+    "tier": "regular",
+    "x_url": "https://x.com/deepseek_ai"
+  },
+  {
+    "id": "98",
+    "name": "Mistral AI",
+    "username": "MistralAI",
+    "tier": "regular",
+    "x_url": "https://x.com/MistralAI"
+  },
+  {
+    "id": "99",
+    "name": "Omar Sanseviero",
+    "username": "osanseviero",
+    "tier": "regular",
+    "x_url": "https://x.com/osanseviero"
+  },
+  {
+    "id": "100",
+    "name": "Qwen",
+    "username": "Alibaba_Qwen",
+    "tier": "regular",
+    "x_url": "https://x.com/Alibaba_Qwen"
+  },
+  {
+    "id": "101",
+    "name": "Uber Engineering",
+    "username": "UberEng",
+    "tier": "daily",
+    "x_url": "https://x.com/UberEng"
+  },
+  {
+    "id": "102",
+    "name": "lauren (poteto)",
+    "username": "poteto",
+    "tier": "daily",
+    "x_url": "https://x.com/poteto"
+  }
+]

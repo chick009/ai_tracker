@@ -1,0 +1,50 @@
+{
+  "model": "gpt-6-astra",
+  "peers": [
+    "claude-fable-5.1",
+    "claude-opus-5",
+    "gpt-5.6-sol"
+  ],
+  "source_url": "https://openai.com/index/gpt-6-astra/",
+  "source_note": "OpenAI launch comparison table (2026-09-03). Peer numbers as reported by OpenAI; Anthropic may publish different harness/settings.",
+  "verified_at": "2026-09-11T00:10:09+08:00",
+  "benchmarks": [
+    {
+      "name": "Terminal-Bench 4.0",
+      "why_famous": "Agentic coding via terminal",
+      "scores": {
+        "gpt-6-astra": "57.9%",
+        "claude-fable-5.1": "55.8%",
+        "claude-opus-5": "52.6%",
+        "gpt-5.6-sol": "37.3%"
+      },
+      "delta": "Astra +2.1pp vs Fable 5.1; +5.3pp vs Opus 5"
+    },
+    {
+      "name": "GPQA Diamond",
+      "why_famous": "Graduate-level science reasoning",
+      "scores": {
+        "gpt-6-astra": "96.0%",
+        "claude-fable-5.1": "93.7%",
+        "claude-opus-5": "93.7%",
+        "gpt-5.6-sol": "94.6%",
+        "gemini-3.8-flash": "95.3%"
+      },
+      "delta": "Astra +2.3pp vs Fable 5.1 / Opus 5"
+    },
+    {
+      "name": "Agents' Last Exam",
+      "why_famous": "Long-horizon professional agent tasks",
+      "scores": {
+        "gpt-6-astra": "59.3%",
+        "claude-opus-5": "55.5%",
+        "gpt-5.6-sol": "53.6%"
+      },
+      "delta": "Astra +3.8pp vs Opus 5; OpenAI also claims ~65% fewer output tokens than Opus 5 at these settings"
+    }
+  ],
+  "caveats": [
+    "OSWorld numbers across vendors can use different task releases — avoid naive subtraction",
+    "Prefer same-table comparisons from one primary source when showing deltas"
+  ]
+}

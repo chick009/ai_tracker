@@ -1,0 +1,172 @@
+{
+  "generated_at": "2026-10-19T07:28:25+08:00",
+  "run": "2026-10-19",
+  "mode": "free",
+  "monday_fri_sun_catchup": true,
+  "label": "Monday free-primary Fri–Sun catch-up (46 daily accounts)",
+  "accounts_polled": 46,
+  "posts_fetched": 103,
+  "accounts_with_new": [
+    "cursor_ai",
+    "OfficialLoganK",
+    "bcherny",
+    "cognition",
+    "danshipper",
+    "fal",
+    "rauchg",
+    "levelsio",
+    "runwayml",
+    "ArtificialAnlys",
+    "arena",
+    "EpochAIResearch",
+    "omarsar0",
+    "HamelHusain",
+    "LangChain",
+    "_philschmid",
+    "swyx",
+    "arizeai",
+    "dair_ai",
+    "dsp_",
+    "jxnlco",
+    "jerryjliu0",
+    "llama_index",
+    "lateinteraction",
+    "sh_reya",
+    "natolambert",
+    "rasbt",
+    "AnthropicAI",
+    "GoogleDeepMind",
+    "huggingface",
+    "OpenAI",
+    "OpenAIDevs",
+    "poteto"
+  ],
+  "free_reads_used": 47,
+  "worth_reporting": true,
+  "keep": [
+    {
+      "title": "Hy-Memory：3B-active 專門寫 agent long-term memory，四個 harness 上打贏 Claude Opus 5",
+      "tag": "Learn",
+      "username": "dair_ai",
+      "url": "https://x.com/dair_ai/status/2111525163447746719",
+      "related_url": "https://arxiv.org/abs/2610.22196",
+      "sentence": "變咗乜：Tencent Hunyuan 嘅 Hy-Memory-30B-A3B 專決定存乜、寫幾精準、點用新證據更新；同一模型跑喺 Mem0／MemOS／Hy-Memory。固定 20% subsample 上四個 harness（含 held-out EverMemOS）macro 55.49% vs Opus 5 嘅 54.62%。訓練＝on-policy distillation 學各 framework write protocol，再 RL 獎勵「之後問題可由 stored memory 答到」並罰過度儲存。點解關你事：直接對應 agent memory writer／harness 協議。跟進：對照你而家 Mem0 類 write path，睇 RL reward 同 cross-harness 協議差異。",
+      "caveat": "數字來自 Elvis／論文摘要同固定 subsample；完整 benchmark 同實戰 write quality 要睇 arXiv。",
+      "category": "KEEP"
+    },
+    {
+      "title": "JevAgentHarness：用蒸馏 4B decision model 代 Jev 做 routine tool／argument 選擇——可降成本同加速",
+      "tag": "Learn",
+      "username": "dair_ai",
+      "url": "https://x.com/dair_ai/status/2111496216567742892",
+      "related_url": "https://academy.dair.ai/papers/jevagentharness-benchmarking-deploying-and-training-decision-models-that-share-c-2610.21412",
+      "sentence": "變咗乜：開源 4B decision model 主要由 Jev 喺 agent 自己 states 上嘅答案蒸餾；harness 只喺 confidence 過 threshold（用自身 trajectories 擬合）先用 decision model，否則交返 LLM。擬合 threshold：500 tasks 結果不變但 tool／argument cascades 成本 −14.2%；固定 0.5 反而掉 21.5 分。用 agent 犯錯後 states＋Jev labels 訓練時，陌生任務 91.5% vs Jev 82.0%；熟悉任務可平＋最多 2.5× 更快。點解關你事：harness 入面 routine decision 同 cost／latency trade-off。跟進：搞清楚 threshold fitting 同「mistake-state」訓練資料點收集。",
+      "caveat": "摘要轉述；paper 以 DAIR academy 連結為準，獨立重現同任務族外推未核實。",
+      "category": "KEEP"
+    },
+    {
+      "title": "Memorilla：16 個 latent memory tokens 打贏 full-context，FactKG 用 108× 更少 source tokens",
+      "tag": "Learn",
+      "username": "omarsar0",
+      "url": "https://x.com/omarsar0/status/2111879742454665582",
+      "related_url": "https://arxiv.org/abs/2610.21375",
+      "sentence": "變咗乜：文件先 encode 成可重用 embeddings；每 query 一個 learned module 從整 collection 寫入 16 tokens 畀 frozen LLM。FactKG 84.33% vs full-context 80.43%（source docs 108× 更少 tokens）；八個 benchmark 贏五個，亦打贏 Mem0／MemoRAG 等。當 agent memory（TextWorld 用自身 history 做 collection）成功率 18.6%→24.2%，少 revisit rooms。點解關你事：agent／RAG memory compression 同 continually learning 冷模型。跟進：對照 note_tweet／working memory schema，睇 gather module 點寫入 input space。",
+      "caveat": "作者／Elvis 轉述；gather module 泛化同真實 retrieval corpus 成本未獨立驗證。",
+      "category": "KEEP"
+    },
+    {
+      "title": "NVIDIA open midtraining recipe：256K／500B tokens 嘅 SE 資料＋少量 agent traces，SWE-bench 明顯升",
+      "tag": "Learn",
+      "username": "dair_ai",
+      "url": "https://x.com/dair_ai/status/2111452428294144180",
+      "related_url": "https://arxiv.org/abs/2610.22019",
+      "sentence": "變咗乜：SFT 不變，中間加一段 midtraining；Nemotron 3.5 Lightning 上 SWE-bench Multilingual 55.8→62.8，Verified 60.7→64.5，Pro 32.0→35.5；更大 Super 上 DeepSWE 11.7→15.7。資料＝packed repos／PRs／commits／build logs＋少量 agent traces。重要工程訊號：base proxy metrics 預測唔到 post-training，所以每個 data 選擇用短固定 SFT 評。點解關你事：coding agent 底座 midtraining／eval 方法。跟進：讀 recipe ablations，對照你而家 post-train 資料配比。",
+      "caveat": "廠方／論文數字；跨模型可轉移性同完整 recipe 細節以 arXiv 為準。",
+      "category": "KEEP"
+    },
+    {
+      "title": "Cursor Cloud Agents：interactive canvases＋Environments API beta＋最多 500 repos／5× 更快啟動",
+      "tag": "Build",
+      "username": "cursor_ai",
+      "url": "https://x.com/cursor_ai/status/2111193957527146711",
+      "related_url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+      "sentence": "變咗乜：cloud agents 可邊做邊起 dashboard／report canvas，完成後用連結分享；Environments API beta 可程式化建／管 environment（clone 邊啲 repo、跑 environment.json）；環境支援最多 500 repos，大型 multi-repo 啟動約 5× 更快。點解關你事：你日常用 Cursor cloud agents／Projects。跟進：試 Environments API 同 canvas 分享係咪夠做 orchestrator handoff。",
+      "caveat": "官方 changelog；API beta 限制同 canvas 權限模型要以文件為準。",
+      "category": "KEEP"
+    }
+  ],
+  "radar": [
+    {
+      "title": "Data World：由生成機制合成 data-analysis environments，RL 喺 DABstep-Hard ＋20.9",
+      "tag": "Watch",
+      "username": "omarsar0",
+      "url": "https://x.com/omarsar0/status/2111936617699332566",
+      "related_url": "https://arxiv.org/abs/2610.21656",
+      "sentence": "引擎先寫 dataset 生成機制再產 files／tasks／rubrics；Qwen3.6-35B-A3B RL（2135 tasks、無 distilled trajectories）亦喺 DAComp／JobBench 有雙位升幅。附帶發現：frontier 計對數字多過得出正確結論。點解關你事：synthetic eval env／agent RL 資料。",
+      "caveat": "論文摘要；独立 audit 同 grading 可靠性要跟原文。",
+      "category": "RADAR"
+    },
+    {
+      "title": "LangChain Managed Deep Agents：sandbox 外 proxy 注入 token——agent 永遠睇唔到憑證",
+      "tag": "Watch",
+      "username": "LangChain",
+      "url": "https://x.com/LangChain/status/2111146976683425860",
+      "related_url": "",
+      "sentence": "sandbox 跑未知套件時，憑證若喺環境入面就暴露；Managed Deep Agents 只喺允許嘅 service call 由 proxy 外加 token。點解關你事：coding／browser agent credential gate。",
+      "caveat": "產品宣傳貼；實作邊界同 bypass 路徑要以文件／獨立測試為準。",
+      "category": "RADAR"
+    }
+  ],
+  "overflow_keep": [
+    {
+      "title": "LangSmith AI Search：對 agent trajectories 做 filter＋小模型並行對照，唔使 LLM 讀晒所有 spans",
+      "tag": "Build",
+      "username": "LangChain",
+      "url": "https://x.com/LangChain/status/2111140112201605469",
+      "related_url": "https://www.langchain.com/blog/langsmith-trajectories-tracing",
+      "sentence": "SmithDB 將 traces 標準化成 trajectory；搜尋先用 structured filters，再用小模型並行 check。點解關你事：agent eval／debug／trace retrieval。",
+      "caveat": "廠方 blog；150 Open SWE conversations 驗證範圍有限。",
+      "category": "KEEP"
+    },
+    {
+      "title": "Arize Phoenix MCP：用 SQL＋code mode 查 traces，成本約低 17× vs 逐頁拉 spans",
+      "tag": "Build",
+      "username": "arizeai",
+      "url": "https://x.com/arizeai/status/2111028588539679027",
+      "related_url": "https://luma.com/arizeai-query-phoenix-traces-with-sql-emea?utm_source=socials&utm_medium=socials&utm_campaign=2026-11-05+-+Webinar+-+Query+Phoenix+traces+with+SQL+-+EMEA&utm_content=invite",
+      "sentence": "唔使 LLM 讀數千 spans 先數 error；MCP 喺 Claude Code／Cursor 示範 SQL 查詢。點解關你事：MCP＋observability／eval tooling。",
+      "caveat": "自家 benchmark＋webinar CTA；數字未必可外推。",
+      "category": "KEEP"
+    },
+    {
+      "title": "pstack /create-formal-verification-skill：meta-skill 按目標生成 TLA+／Kani 等 formal verification suite",
+      "tag": "Build",
+      "username": "poteto",
+      "url": "https://x.com/poteto/status/2111926622278521253",
+      "related_url": "",
+      "sentence": "beta meta-skill；Lauren 用 TLA+ 建模已搵到 bugs。論點：formal verify 可畀 coding agents「寫啱」超能力。點解關你事：agent harness 正確性／verification loop。",
+      "caveat": "個人實驗＋產品 beta；唔等於一般業務需求易建模。",
+      "category": "KEEP"
+    },
+    {
+      "title": "ChatGPT：多個 agents 可並行拆任務，Pro 用戶可跟進度同開完成項複核",
+      "tag": "Watch",
+      "username": "OpenAI",
+      "url": "https://x.com/OpenAI/status/2111192259073094035",
+      "related_url": "",
+      "sentence": "GPT-6 Astra Pro 更快＋更好用 plugins／tools；並行 multi-agent 而家喺 Chat tab。點解關你事：產品化 parallel agent UX。",
+      "caveat": "產品宣佈；orchestration／failure 處理細節未公開。",
+      "category": "KEEP"
+    },
+    {
+      "title": "DeepMind：四個 Gemini 4 Argon agents 27 小時由零通關 Minecraft（code＋text sandbox）",
+      "tag": "Learn",
+      "username": "GoogleDeepMind",
+      "url": "https://x.com/GoogleDeepMind/status/2111127991401247033",
+      "related_url": "https://x.com/maxencefaldor/status/2111023397106770026",
+      "sentence": "寫 2783 programs、分工、共享 notes、互 debug，無人協助。點解關你事：multi-agent harness／open-world coding。",
+      "caveat": "官方 demo 敘事；評分設定同可重現性要跟 thread／報告。",
+      "category": "KEEP"
+    }
+  ]
+}

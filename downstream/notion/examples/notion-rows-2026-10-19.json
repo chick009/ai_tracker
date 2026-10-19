@@ -1,0 +1,44 @@
+{
+ "papers": {
+  "OpenGCUA": "3fe0a07407748144a442d9729660bd0e",
+  "Waypoint-OPD": "3fe0a074077481d39b1bf10aae4d4343",
+  "Self-Evolving Agent Harness": "3fe0a07407748194a1ccdc42f8990a06",
+  "FDE-Gym": "3fe0a074077481218630f597bc7061c9",
+  "MAI-Gym": "3fe0a07407748133af64c4c08a7d26da",
+  "MJev-Spatial": "3fe0a0740774811bbddaee605a037752",
+  "3DCodeVerse": "3fe0a074077481a3a315ed569a1e5303"
+ },
+ "applicational": {
+  "Hy-Memory": "3fe0a0740774810e9a3ce451b622126f",
+  "Memorilla": "3fe0a074077481fa93add2cbefbf60b3",
+  "NVIDIA midtraining agentic coding": "3fe0a074077481a08f96f8ff7b80df15",
+  "JevAgentHarness": "3fe0a0740774810d8b58de8a5351e199",
+  "Data World / DABstep": "3fe0a074077481d6bcf7d58205573713",
+  "AMD MI355X + vLLM agentic inference": "3fe0a074077481248805fa4b2b689584",
+  "Google wet-lab agent building blocks": "3fe0a07407748113b3b5e7a295983c44"
+ },
+ "model_ide": {
+  "Cursor Canvases + Environments": "3fe0a0740774819d9c43c553ee05c6a8",
+  "Beam (Reflection MoE)": "3fe0a07407748104ae29daaac5a0caca",
+  "LangChain Managed Deep Agents": "3fe0a07407748151b801df985866bc24",
+  "MAI-Code-1.1-Flash": "3fe0a07407748150a0acfc66bb6d682a",
+  "OpenCode 2.0.32": "3fe0a074077481b8bd80e227b0ec67aa",
+  "Claude Code 2.1.302": "3fe0a074077481aea7dddbe83ed93521"
+ },
+ "github": {
+  "akitaonrails/ai-memory": "3fe0a07407748133b05cfe0c4e871ae4"
+ },
+ "options_added": {
+  "Model & IDE.Models": [
+   "Beam",
+   "MAI-Code-1.1-Flash"
+  ]
+ },
+ "counts": {
+  "papers": 7,
+  "model_ide": 6,
+  "applicational": 7,
+  "github": 1,
+  "total": 21
+ }
+}

@@ -1,0 +1,886 @@
+{
+  "updated_at": "2026-10-19T17:50:00+08:00",
+  "tracks": [
+    "corp_startup_blog",
+    "application_changelog"
+  ],
+  "item_categories": [
+    "changelog_features",
+    "applications",
+    "engineering",
+    "model_release_benchmark",
+    "model_release_benchmark_with_implementations"
+  ],
+  "digest_priority": [
+    "changelog_feature",
+    "applications",
+    "model_release_implementation",
+    "model_release_benchmark",
+    "engineering",
+    "research",
+    "changelog_refactor",
+    "changelog_bugfix"
+  ],
+  "tag_vocab": {
+    "research": [
+      "systems",
+      "alignment",
+      "science",
+      "interpretability",
+      "formalization",
+      "safety"
+    ],
+    "engineering": [
+      "serving",
+      "inference",
+      "optimization",
+      "infra",
+      "evals",
+      "quantization",
+      "speculative-decoding"
+    ],
+    "applications": [
+      "agents",
+      "product",
+      "use-case",
+      "rag",
+      "workflow",
+      "enterprise",
+      "data-mlops"
+    ],
+    "model_release_benchmark": [
+      "frontier",
+      "open-weights",
+      "multimodal",
+      "on-device",
+      "api-drop",
+      "benchmark"
+    ],
+    "model_release_implementation": [
+      "frontier",
+      "open-weights",
+      "multimodal",
+      "on-device",
+      "api-drop",
+      "serving-launch",
+      "implementation"
+    ],
+    "changelog_bugfix": [
+      "cli",
+      "ide",
+      "bugfix"
+    ],
+    "changelog_feature": [
+      "cli",
+      "ide",
+      "feature",
+      "models",
+      "worktree",
+      "self-host"
+    ],
+    "changelog_refactor": [
+      "cli",
+      "ide",
+      "refactor",
+      "compile"
+    ]
+  },
+  "weekly_synthesis": true,
+  "sources": [
+    {
+      "id": "allen-ai",
+      "name": "Allen AI Research",
+      "type": "blog",
+      "url": "https://allenai.org/research",
+      "path": "sources/allen-ai.json",
+      "post_count": 29,
+      "fetch": {
+        "method": "rss",
+        "alt_urls": [
+          "https://medium.com/feed/ai2-blog"
+        ],
+        "reason": "HTML research page thin; Medium ai2-blog RSS works (may migrate)",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-19T06:22:00+08:00",
+      "fetch_tier": 2
+    },
+    {
+      "id": "anthropic-research",
+      "name": "Anthropic Research (blog)",
+      "type": "blog",
+      "url": "https://www.anthropic.com/research",
+      "path": "sources/anthropic-research.json",
+      "post_count": 29,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "cerebras",
+      "name": "Cerebras Blog",
+      "type": "blog",
+      "url": "https://www.cerebras.ai/blog",
+      "path": "sources/cerebras.json",
+      "post_count": 49,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "claude-code-changelog",
+      "name": "Claude Code changelog",
+      "type": "changelog",
+      "url": "https://code.claude.com/docs/en/changelog",
+      "path": "sources/claude-code-changelog.json",
+      "post_count": 15,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "codex-changelog",
+      "name": "OpenAI Codex changelog",
+      "type": "changelog",
+      "url": "https://developers.openai.com/codex/changelog",
+      "path": "sources/codex-changelog.json",
+      "post_count": 11,
+      "fetch": {
+        "method": "browser",
+        "tier": 3,
+        "alt_urls": [],
+        "reason": "HTTP 403 Cloudflare on curl; permanent computerUse Chromium (Johnny 2026-10-19)",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 3,
+      "updated_at": "2026-10-19T17:50:00+08:00",
+      "last_fetch_tier": 3
+    },
+    {
+      "id": "cognition",
+      "name": "Cognition Blog",
+      "type": "blog",
+      "url": "https://cognition.com/blog",
+      "path": "sources/cognition.json",
+      "post_count": 91,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "cursor-blog",
+      "name": "Cursor Blog",
+      "type": "blog",
+      "url": "https://cursor.com/zh-Hant/blog",
+      "path": "sources/cursor-blog.json",
+      "post_count": 19,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:25:00+08:00"
+    },
+    {
+      "id": "cursor-changelog",
+      "name": "Cursor Changelog",
+      "type": "changelog",
+      "url": "https://cursor.com/changelog",
+      "path": "sources/cursor-changelog.json",
+      "post_count": 17,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "deepseek",
+      "name": "DeepSeek News",
+      "type": "blog",
+      "url": "https://www.deepseek.com/en/news/",
+      "path": "sources/deepseek.json",
+      "post_count": 9,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "glm-zhipu",
+      "name": "GLM / Zhipu Research",
+      "type": "blog",
+      "url": "https://www.zhipuai.cn/en/research",
+      "path": "sources/glm-zhipu.json",
+      "post_count": 2,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "google-research",
+      "name": "Google Research Blog",
+      "type": "blog",
+      "url": "https://research.google/blog/",
+      "path": "sources/google-research.json",
+      "post_count": 71,
+      "fetch": {
+        "method": "rss",
+        "alt_urls": [
+          "https://blog.research.google/atom.xml",
+          "https://blog.research.google/feeds/posts/default"
+        ],
+        "reason": "Atom feed reachable with dated entries",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 2,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "huggingface",
+      "name": "Hugging Face Blog",
+      "type": "blog",
+      "url": "https://huggingface.co/blog",
+      "path": "sources/huggingface.json",
+      "post_count": 899,
+      "fetch": {
+        "method": "rss",
+        "alt_urls": [
+          "https://huggingface.co/blog/feed.xml"
+        ],
+        "reason": "Official blog RSS has many items; use before HTML",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 2,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "inco",
+      "name": "Inco AI",
+      "type": "blog",
+      "url": "https://inco.ai/blog/",
+      "path": "sources/inco.json",
+      "post_count": 4,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "liquid-engineering",
+      "name": "Liquid AI Engineering",
+      "type": "blog",
+      "url": "https://www.liquid.ai/engineering",
+      "path": "sources/liquid-engineering.json",
+      "post_count": 67,
+      "fetch": {
+        "method": "sitemap",
+        "alt_urls": [
+          "https://www.liquid.ai/sitemap.xml"
+        ],
+        "url_filter": "/blog/",
+        "reason": "Listing CSR/thin; sitemap has /blog/* + lastmod",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-19T06:22:00+08:00",
+      "fetch_tier": 2
+    },
+    {
+      "id": "liquid-models",
+      "name": "Liquid AI Models",
+      "type": "models",
+      "url": "https://www.liquid.ai/models",
+      "path": "sources/liquid-models.json",
+      "post_count": 79,
+      "fetch": {
+        "method": "sitemap",
+        "alt_urls": [
+          "https://www.liquid.ai/sitemap.xml"
+        ],
+        "url_filter": "/blog/|/news/models",
+        "reason": "Shared Liquid sitemap",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-19T06:25:00+08:00",
+      "fetch_tier": 2
+    },
+    {
+      "id": "liquid-research",
+      "name": "Liquid AI Research",
+      "type": "blog",
+      "url": "https://www.liquid.ai/research",
+      "path": "sources/liquid-research.json",
+      "post_count": 69,
+      "fetch": {
+        "method": "sitemap",
+        "alt_urls": [
+          "https://www.liquid.ai/sitemap.xml"
+        ],
+        "url_filter": "/blog/|/news/research",
+        "reason": "Shared Liquid sitemap",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-19T06:22:00+08:00",
+      "fetch_tier": 2
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI Blog",
+      "type": "blog",
+      "url": "https://ai.meta.com/blog/",
+      "path": "sources/meta-ai.json",
+      "post_count": 16,
+      "fetch": {
+        "method": "browser",
+        "alt_urls": [],
+        "reason": "HTTP 400 on curl; Chromium OK; no usable ai.meta RSS",
+        "tier": 3,
+        "last_attempt": "tier3_computerUse_chromium_2026-10-19",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-16T06:23:46+08:00",
+      "fetch_tier": 3,
+      "last_fetch_tier": 3,
+      "last_scan": "2026-10-16"
+    },
+    {
+      "id": "microsoft-ai",
+      "name": "Microsoft AI Blog",
+      "type": "blog",
+      "url": "https://microsoft.ai/blog/",
+      "path": "sources/microsoft-ai.json",
+      "post_count": 12,
+      "fetch": {
+        "method": "browser",
+        "alt_urls": [
+          "https://microsoft.ai/feed",
+          "https://microsoft.ai/blog/rss"
+        ],
+        "reason": "Feeds return empty channel; HTML listing needs browser/CSR",
+        "tier": 3,
+        "last_attempt": "tier3_computerUse_chromium_2026-10-19",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 3,
+      "updated_at": "2026-10-16T06:23:46+08:00",
+      "last_fetch_tier": 3,
+      "last_scan": "2026-10-16"
+    },
+    {
+      "id": "minimax",
+      "name": "MiniMax Blog",
+      "type": "blog",
+      "url": "https://www.minimax.io/blog",
+      "path": "sources/minimax.json",
+      "post_count": 12,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "mistral",
+      "name": "Mistral News",
+      "type": "blog",
+      "url": "https://mistral.ai/news/",
+      "path": "sources/mistral.json",
+      "post_count": 91,
+      "fetch": {
+        "method": "rss",
+        "alt_urls": [
+          "https://mistral.ai/news/rss"
+        ],
+        "reason": "news/rss returns real feed (~34 items)",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 2,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "nvidia-developer",
+      "name": "NVIDIA Developer Blog",
+      "type": "blog",
+      "url": "https://developer.nvidia.com/blog/",
+      "path": "sources/nvidia-developer.json",
+      "post_count": 50,
+      "fetch": {
+        "method": "rss",
+        "alt_urls": [
+          "https://developer.nvidia.com/blog/feed"
+        ],
+        "reason": "Atom feed fresh (smoke saw 2026-09-30)",
+        "tier": 2,
+        "fallback": "html",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 2,
+      "updated_at": "2026-10-19T06:25:00+08:00"
+    },
+    {
+      "id": "openai-news",
+      "name": "OpenAI News/Index",
+      "type": "blog",
+      "url": "https://openai.com/news/",
+      "path": "sources/openai-news.json",
+      "post_count": 1300,
+      "fetch": {
+        "method": "browser",
+        "alt_urls": [
+          "https://openai.com/news/rss.xml"
+        ],
+        "reason": "openai.com HTML/article bodies Cloudflare 403; permanent computerUse (RSS kept as alt discovery)",
+        "tier": 3,
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 3,
+      "updated_at": "2026-10-19T17:50:00+08:00",
+      "last_fetch_tier": 3
+    },
+    {
+      "id": "openai-publications",
+      "name": "OpenAI Publications",
+      "type": "blog",
+      "url": "https://openai.com/research/index/publication/",
+      "path": "sources/openai-publications.json",
+      "post_count": 2,
+      "fetch": {
+        "method": "browser",
+        "tier": 3,
+        "alt_urls": [],
+        "reason": "HTTP 403 Cloudflare on curl; permanent computerUse Chromium (Johnny 2026-10-19)",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 3,
+      "updated_at": "2026-10-19T17:50:00+08:00",
+      "last_fetch_tier": 3
+    },
+    {
+      "id": "opencode-changelog",
+      "name": "OpenCode changelog",
+      "type": "changelog",
+      "url": "https://opencode.ai/changelog",
+      "path": "sources/opencode-changelog.json",
+      "post_count": 4,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:25:00+08:00"
+    },
+    {
+      "id": "openrouter",
+      "name": "OpenRouter Blog",
+      "type": "blog",
+      "url": "https://openrouter.ai/blog/",
+      "path": "sources/openrouter.json",
+      "post_count": 155,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity Hub Blog",
+      "type": "blog",
+      "url": "https://www.perplexity.ai/hub/blog",
+      "path": "sources/perplexity.json",
+      "post_count": 35,
+      "updated_at": "2026-10-16T06:23:46+08:00",
+      "fetch": {
+        "method": "browser",
+        "alt_urls": [],
+        "reason": "HTTP 403 Cloudflare on curl; Chromium OK",
+        "tier": 3,
+        "last_attempt": "tier3_computerUse_chromium_2026-10-19",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 3,
+      "last_fetch_tier": 3,
+      "last_scan": "2026-10-16"
+    },
+    {
+      "id": "pi-changelog",
+      "name": "Pi harness releases",
+      "type": "changelog",
+      "url": "https://pi.dev/news/releases",
+      "path": "sources/pi-changelog.json",
+      "post_count": 47,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "poolside",
+      "name": "Poolside Blog",
+      "type": "blog",
+      "url": "https://poolside.ai/blog",
+      "path": "sources/poolside.json",
+      "post_count": 20,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "qwen",
+      "name": "Qwen Research",
+      "type": "blog",
+      "url": "https://qwen.ai/research",
+      "path": "sources/qwen.json",
+      "post_count": 59,
+      "fetch": {
+        "method": "browser",
+        "alt_urls": [
+          "https://qwenlm.github.io/blog/index.xml"
+        ],
+        "reason": "qwen.ai CSR; github.io RSS reachable but STALE (newest ~2025-09) — do not trust as primary",
+        "tier": 3,
+        "last_attempt": "tier3_computerUse_chromium_2026-10-19",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-16T06:23:46+08:00",
+      "fetch_tier": 3,
+      "last_fetch_tier": 3,
+      "last_scan": "2026-10-16"
+    },
+    {
+      "id": "sakana",
+      "name": "Sakana AI Blog",
+      "type": "blog",
+      "url": "https://sakana.ai/blog/",
+      "path": "sources/sakana.json",
+      "post_count": 8,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:25:00+08:00"
+    },
+    {
+      "id": "salesforce",
+      "name": "Salesforce Blog",
+      "type": "blog",
+      "url": "https://www.salesforce.com/blog/",
+      "path": "sources/salesforce.json",
+      "post_count": 19,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:25:00+08:00"
+    },
+    {
+      "id": "snowflake",
+      "name": "Snowflake Blog",
+      "type": "blog",
+      "url": "https://www.snowflake.com/en/blog/",
+      "path": "sources/snowflake.json",
+      "post_count": 33,
+      "fetch": {
+        "method": "browser",
+        "alt_urls": [],
+        "reason": "Intermittent Cloudflare 403 / thin SPA; Chromium OK",
+        "tier": 3,
+        "last_attempt": "tier3_computerUse_chromium_2026-10-19",
+        "last_scan": "2026-10-19"
+      },
+      "updated_at": "2026-10-16T06:23:46+08:00",
+      "fetch_tier": 3,
+      "last_fetch_tier": 3,
+      "last_scan": "2026-10-16"
+    },
+    {
+      "id": "xai",
+      "name": "xAI News",
+      "type": "blog",
+      "url": "https://x.ai/news",
+      "path": "sources/xai.json",
+      "post_count": 87,
+      "fetch": {
+        "method": "html",
+        "tier": 1,
+        "alt_urls": [],
+        "reason": "Listing HTTP 200; no fresh RSS/sitemap found — simple curl",
+        "fallback": "browser",
+        "last_scan": "2026-10-19"
+      },
+      "fetch_tier": 1,
+      "updated_at": "2026-10-19T06:22:00+08:00"
+    },
+    {
+      "id": "openai-api-changelog",
+      "name": "OpenAI API docs changelog",
+      "type": "changelog",
+      "url": "https://developers.openai.com/api/docs/changelog",
+      "path": "sources/openai-api-changelog.json",
+      "post_count": 0,
+      "fetch": {
+        "method": "browser",
+        "tier": 3,
+        "alt_urls": [
+          "https://platform.openai.com/docs/changelog"
+        ],
+        "reason": "HTTP 403 Cloudflare on curl; permanent computerUse Chromium (Johnny 2026-10-19)",
+        "fallback": "browser",
+        "last_scan": null
+      },
+      "fetch_tier": 3,
+      "last_fetch_tier": 3,
+      "updated_at": "2026-10-19T17:50:00+08:00"
+    }
+  ],
+  "taxonomy_source": "trackers-notebook.jpg",
+  "digest_orientations": {
+    "changelog_features": {
+      "meaning": "Newly supported functionalities that enhance the agent itself",
+      "include": [
+        "worktree",
+        "async questions",
+        "self-hosted execution",
+        "memory tools",
+        "inline Q&A while agent runs",
+        "new agent UX that expands capability"
+      ],
+      "exclude": [
+        "merely adding a model to a picker",
+        "adding effort/thinking levels",
+        "pricing text fixes",
+        "pure bugfixes"
+      ]
+    },
+    "applications": {
+      "meaning": "How applications are used — list concrete usages",
+      "examples": [
+        "memory retrieval",
+        "RAG",
+        "TTS",
+        "legacy modernization agents",
+        "enterprise bots",
+        "data pipelines with coding agents"
+      ]
+    },
+    "engineering": {
+      "meaning": "Engineering work usages — systems/infra techniques",
+      "examples": [
+        "inference optimizations",
+        "sandbox handling",
+        "EPD disaggregation",
+        "region routing",
+        "CUDA/kernel work"
+      ]
+    },
+    "model_release_benchmark": {
+      "meaning": "Proprietary (or closed/frontier) model releases framed by benchmarks",
+      "fields_to_extract": [
+        "benchmark_metrics.cost_efficiency",
+        "benchmark_metrics.performance_vs_sota",
+        "long_agent_harness_support",
+        "application_breakthroughs"
+      ]
+    },
+    "model_release_benchmark_with_implementations": {
+      "meaning": "Model releases that also disclose architecture/implementation details",
+      "fields_to_extract": [
+        "components (Sparse Attention, MLP / Gated Delta Net, MHC, Mamba, …)",
+        "inference_optimizations (speculative decoding, …)",
+        "plus benchmark context when present"
+      ]
+    }
+  },
+  "card_schema_version": "v1",
+  "ingest": {
+    "base_url": "https://psmjbqbnkoioicbasqlm.supabase.co/functions/v1",
+    "cards": "/tracker-cards-ingest",
+    "weeks": "/tracker-weeks-ingest",
+    "metrics_optional": true,
+    "auth": "Bearer TRACKER_INGEST_TOKEN"
+  },
+  "latest_week": "2026-10-19",
+  "last_weekly_rollup": {
+    "week_start": "2026-09-15",
+    "at": "2026-09-21T09:28:59+08:00",
+    "cards": 52,
+    "ingest": "skipped"
+  },
+  "fetch_policy": {
+    "updated_at": "2026-10-19T17:50:00+08:00",
+    "tiers": {
+      "1_curl": "Simple HTTP curl/WebFetch of listing URL. Fallback browser only if empty/unparseable.",
+      "2_rss_sitemap": "Try RSS/Atom/sitemap in fetch.alt_urls first; then HTML; browser if still empty.",
+      "3_browser": "computerUse Chromium required (Cloudflare / empty-stale feed / CSR). Never Shell Playwright."
+    },
+    "ladder_order": [
+      "curl html if tier1",
+      "rss/sitemap if tier2",
+      "browser if tier3 or prior empty+fallback"
+    ],
+    "failed_rss_debug_2026-10-01": {
+      "qwenlm.github.io/blog/index.xml": "REACHABLE but STALE (items present, dates in 2025) → not primary",
+      "microsoft.ai/feed|blog/rss": "REACHABLE but EMPTY (0 items) → fail",
+      "cerebras/minimax/sakana/xai/poolside/openrouter/cognition rss": "404 fail",
+      "cursor.com/atom.xml": "REACHABLE but STALE (newest 2024-11) → ignore, stay curl",
+      "mistral.ai/news/rss": "OK use",
+      "huggingface.co/blog/feed.xml": "OK use",
+      "openai.com/news/rss.xml": "OK use",
+      "nvidia blog/feed": "OK use",
+      "google research atom": "OK use",
+      "liquid sitemap.xml": "OK use",
+      "medium.com/feed/ai2-blog": "OK use (thin)"
+    },
+    "tier1_ids": [
+      "anthropic-research",
+      "cerebras",
+      "claude-code-changelog",
+      "cognition",
+      "cursor-blog",
+      "cursor-changelog",
+      "deepseek",
+      "glm-zhipu",
+      "inco",
+      "minimax",
+      "opencode-changelog",
+      "openrouter",
+      "pi-changelog",
+      "poolside",
+      "sakana",
+      "salesforce",
+      "xai"
+    ],
+    "tier2_ids": [
+      "allen-ai",
+      "google-research",
+      "huggingface",
+      "liquid-engineering",
+      "liquid-models",
+      "liquid-research",
+      "mistral",
+      "nvidia-developer"
+    ],
+    "tier3_ids": [
+      "meta-ai",
+      "microsoft-ai",
+      "perplexity",
+      "qwen",
+      "snowflake",
+      "codex-changelog",
+      "openai-publications",
+      "openai-news",
+      "openai-api-changelog"
+    ],
+    "permanent_promote_on_403": "If curl/WebFetch returns 403/Cloudflare/block in a scan: (1) same run, re-fetch via computerUse Chromium and supplement the card/digest; (2) permanently set that source fetch_tier=3 in index.json so future scans always use browser."
+  }
+}

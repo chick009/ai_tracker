@@ -1,0 +1,164 @@
+{
+  "type": "sample_digest",
+  "generated_at": "2026-09-10T13:37:42+08:00",
+  "source": "poolside",
+  "note": "Sample — Poolside only; shows Trackers categories on real posts.",
+  "synthesis": "Poolside 主軸：boundary 內 coding agents（Desktop Assistant／Platform）+ Laguna 模型線（S／XS 2.1、256K）+ eval reward-hacking research；系統向有 Grace Blackwell C2C training optimization。",
+  "picks_by_category": {
+    "applications": [
+      {
+        "title": "Introducing Poolside Desktop Assistant, for macOS",
+        "url": "https://poolside.ai/blog/introducing-poolside-desktop-assistant",
+        "date": "2026-07-28",
+        "track": "corp_startup_blog",
+        "category": "applications",
+        "tags": [
+          "agents",
+          "product",
+          "workflow"
+        ],
+        "summary": "macOS app + VS Code/Visual Studio extensions for multi-repo coding agents.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      },
+      {
+        "title": "AI, your way: introducing the Poolside Platform",
+        "url": "https://poolside.ai/blog/introducing-the-poolside-platform",
+        "date": "2026-05-05",
+        "track": "corp_startup_blog",
+        "category": "applications",
+        "tags": [
+          "agents",
+          "enterprise",
+          "product",
+          "workflow"
+        ],
+        "summary": "On-prem/VPC agent platform with MCP, audit trajectories, governance inside security boundary.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      }
+    ],
+    "model_release_benchmark": [
+      {
+        "title": "Introducing Laguna S 2.1",
+        "url": "https://poolside.ai/blog/introducing-laguna-s-2-1",
+        "date": "2026-07-21",
+        "track": "corp_startup_blog",
+        "category": "model_release_benchmark",
+        "tags": [
+          "frontier",
+          "benchmark",
+          "api-drop"
+        ],
+        "summary": "Model release aimed at longer-horizon work and reasoning.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      },
+      {
+        "title": "Introducing Laguna XS 2.1",
+        "url": "https://poolside.ai/blog/introducing-laguna-xs-2-1",
+        "date": "2026-07-02",
+        "track": "corp_startup_blog",
+        "category": "model_release_benchmark",
+        "tags": [
+          "open-weights",
+          "benchmark",
+          "api-drop"
+        ],
+        "summary": "Upgrade of Laguna XS.2 open-weight / API model line.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      },
+      {
+        "title": "Introducing Laguna XS.2 and Laguna M.1",
+        "url": "https://poolside.ai/blog/introducing-laguna-xs2-m1",
+        "date": "2026-04-28",
+        "track": "corp_startup_blog",
+        "category": "model_release_benchmark",
+        "tags": [
+          "frontier",
+          "open-weights",
+          "benchmark",
+          "api-drop"
+        ],
+        "summary": "Foundation models + product preview; HF weights; Harbor agent-harness benchmarks.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      }
+    ],
+    "model_release_implementation": [
+      {
+        "title": "Long context update: Laguna XS.2 and M.1",
+        "url": "https://poolside.ai/blog/long-context-update-laguna-xs-2-and-m-1",
+        "date": "2026-05-26",
+        "track": "corp_startup_blog",
+        "category": "model_release_implementation",
+        "tags": [
+          "api-drop",
+          "serving-launch",
+          "implementation"
+        ],
+        "summary": "Serving Laguna XS.2 and M.1 at 256K context.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      },
+      {
+        "title": "Laguna XS.2 and M.1: A Deeper Dive",
+        "url": "https://poolside.ai/blog/laguna-a-deeper-dive",
+        "date": "2026-04-28",
+        "track": "corp_startup_blog",
+        "category": "model_release_implementation",
+        "tags": [
+          "implementation",
+          "frontier",
+          "open-weights"
+        ],
+        "summary": "Architecture/training/RL stack details behind Laguna releases.",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      }
+    ],
+    "engineering": [
+      {
+        "title": "Tools of the Trade: C2C Activation Offloading on Grace Blackwell",
+        "url": "https://poolside.ai/blog/tools-of-the-trade-c2c-activation-offloading-on-grace-blackwell",
+        "date": "2026-03-18",
+        "track": "corp_startup_blog",
+        "category": "engineering",
+        "tags": [
+          "optimization",
+          "infra",
+          "inference"
+        ],
+        "summary": "NVLink C2C activation offloading vs selective checkpointing (training systems).",
+        "application_relevant": false,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      }
+    ],
+    "research": [
+      {
+        "title": "Through the looking glass of benchmark hacking",
+        "url": "https://poolside.ai/blog/through-the-looking-glass",
+        "date": "2026-05-11",
+        "track": "corp_startup_blog",
+        "category": "research",
+        "tags": [
+          "evals",
+          "systems"
+        ],
+        "summary": "Reward hacks on SWE-Bench-style evals and mitigation (prompting, judges, sample review).",
+        "application_relevant": true,
+        "first_seen": "2026-09-10",
+        "last_seen": "2026-09-10"
+      }
+    ]
+  }
+}

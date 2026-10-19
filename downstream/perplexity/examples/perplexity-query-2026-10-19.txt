@@ -1,0 +1,11 @@
+為 AI Tracker 2026-10-19 Top 10 非論文、非 GitHub 項寫繁中 TL;DR（每項：機制→關鍵數字→一條限制，約 120–220 字）。請逐項覆蓋並附原文連結：
+
+Top 10:
+1. Hy-Memory — https://x.com/dair_ai/status/2111525163447746719
+4. Cursor Canvases + Environments — https://cursor.com/changelog/cloud-agent-canvases-and-environments
+6. Memorilla — https://x.com/omarsar0/status/2111879742454665582
+8. Beam — https://huggingface.co/blog/reflection-beam
+9. NVIDIA midtraining agentic coding — https://x.com/dair_ai/status/2111452428294144180
+10. JevAgentHarness — https://x.com/dair_ai/status/2111496216567742892
+
+版本衝突時以 Blog／X 原文為準。輸出用繁體中文，分項標題清晰。

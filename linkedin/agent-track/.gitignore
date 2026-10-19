@@ -1,0 +1,29 @@
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# LinkedIn session for this repo only (copy in locally; never commit)
+data/.linkedin-browser-profile/
+
+# Feed capture outputs
+data/feed/*.json
+data/feed/*.jsonl
+!data/feed/.gitkeep
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

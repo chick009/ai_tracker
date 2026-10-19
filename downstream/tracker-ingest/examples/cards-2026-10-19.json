@@ -1,0 +1,380 @@
+[
+ {
+  "id": "hy-memory-2026-10-19",
+  "title": "Hy-Memory",
+  "url": "https://x.com/dair_ai/status/2111525163447746719",
+  "source": "X / DAIR.AI",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Applicational",
+   "X"
+  ],
+  "key_takeaway": [
+   "Hy-Memory（Tencent Hunyuan）：專職 agent 長期記憶寫入嘅 30B-A3B（3B active）——決定存咩、點寫、點用新證據更新舊記憶；on-policy distillation＋RL，跨 Mem0／MemOS／多 harness 寫記憶質素打贏 Claude Opus 5。限制：公開帖未報完整 benchmark 表同延遲／成本。"
+  ]
+ },
+ {
+  "id": "opengcua-2026-10-19",
+  "title": "OpenGCUA",
+  "url": "https://huggingface.co/papers/2610.22200",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "OpenGCUA（Tongyi-MAI）：通才 computer-use 全開源 stack——視覺＋程式介面、code execution、harness→model decision transfer。OSWorld-v2 八模平均 partial **+19.6**、步數相對 batched GUI-only **−53%**；另有 macOS real-device harness／cross-device SDK。限制：real-device 樣本少；Qwen3.8-Max 推理 token 可達 Astra **19.4×**。"
+  ]
+ },
+ {
+  "id": "waypoint-opd-2026-10-19",
+  "title": "Waypoint-OPD",
+  "url": "https://huggingface.co/papers/2610.21601",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "Waypoint-OPD：用同一 RL run 嘅中途 teacher checkpoint，比較 early／late policy shift 方向一致性，再 gated 端點 OPD（僅多一次 frozen scoring）。Qwen3-4B teacher → 8B／14B／30B-A3B 六組 domain×student 均最高；shuffle gate 數學分數跌穿 no-gate。限制：waypoint 位置敏感度低但未報 AIME24 留出；更早／多 waypoint 未測。"
+  ]
+ },
+ {
+  "id": "cursor-canvases-2026-10-19",
+  "title": "Cursor Canvases + Environments",
+  "url": "https://cursor.com/changelog/cloud-agent-canvases-and-environments",
+  "source": "Cursor / Blog",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "changelog_feature",
+  "priority": "P0",
+  "tags": [
+   "Act",
+   "Top 10",
+   "Model & IDE",
+   "Blog"
+  ],
+  "key_takeaway": [
+   "Cursor Canvases＋Environments：cloud agents 可產出 interactive canvas 並以連結分享；Environments API（beta）程式化建立／管理環境；單一環境最多 **300** repos，大環境載入 **5×** 快。限制：API 仍 beta；canvas 內容格式／權限模型細節未入公開 changelog。"
+  ]
+ },
+ {
+  "id": "self-evolving-agent-harness-2026-10-19",
+  "title": "Self-Evolving Agent Harness",
+  "url": "https://huggingface.co/papers/2610.18813",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "Self-Evolving Agent Harness：形式化「權重固定、scaffolding 自演化」——prompts／memory／workflows／tools／plugins；分開 proposal 同 admission，並用 continual PAC 給 generalization／retention／admission 界。66 頁＋Harness-RSI code。限制：理論假設強；部署仍要獨立驗證同權限閘。"
+  ]
+ },
+ {
+  "id": "memorilla-2026-10-19",
+  "title": "Memorilla",
+  "url": "https://x.com/omarsar0/status/2111879742454665582",
+  "source": "X / omarsar0",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Applicational",
+   "X"
+  ],
+  "key_takeaway": [
+   "Memorilla：文件編碼成 **16** 個 latent memory tokens，FactKG 打贏 full-context，source tokens 少 **108×**；亦可作 agent memory。限制：公開帖未完整列其他 bench／延遲；latent 可解釋性同更新策略未詳。"
+  ]
+ },
+ {
+  "id": "fde-gym-2026-10-19",
+  "title": "FDE-Gym",
+  "url": "https://huggingface.co/papers/2610.22350",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "FDE-Gym：95 題「最後一哩」交付（20 場景／18 行業）——模糊需求、live 系統、未言明約束；分數＝客戶 KPI uplift（0–1）扣 stakeholder 成本。最佳配置 mean **0.56**、僅 resolve **14／95**；未言明約束係主瓶頸（隱瞞約束可扣 ~0.28）。限制：scripted stakeholder；知道全部 key facts 仍只有 10／23 達 0.8。"
+  ]
+ },
+ {
+  "id": "beam-2026-10-19",
+  "title": "Beam",
+  "url": "https://huggingface.co/blog/reflection-beam",
+  "source": "Reflection / Hugging Face Blog",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "model_release_implementation",
+  "priority": "P0",
+  "tags": [
+   "Build",
+   "Top 10",
+   "Model & IDE",
+   "Blog"
+  ],
+  "key_takeaway": [
+   "Beam（Reflection）：開源 MoE **501B／23B** active、**1M** ctx、Apache 2.0；自帶 Rust harness；day-0 transformers／vLLM／SGLang；OR 約 **$1／$3**（cache **$0.10**）。SWE-bench Verified BF16 **81.6%**；NVFP4 約 280GB。限制：部署記憶體仍要 501B 級；消費級單卡唔夠。"
+  ]
+ },
+ {
+  "id": "nvidia-midtraining-2026-10-19",
+  "title": "NVIDIA midtraining agentic coding",
+  "url": "https://x.com/dair_ai/status/2111452428294144180",
+  "source": "X / DAIR.AI",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P0",
+  "tags": [
+   "Learn",
+   "Top 10",
+   "Applicational",
+   "X"
+  ],
+  "key_takeaway": [
+   "NVIDIA open midtraining（agentic coding）：SFT 不變、喺 pretrain 同 post-train 之間加 midtrain（256K SE 資料）；Nemotron 3.5 Lightning SWE-bench Multilingual **55.8→62.8**。限制：公開帖未列完整超參同其他 bench；配方適用範圍待核。"
+  ]
+ },
+ {
+  "id": "jev-agent-harness-2026-10-19",
+  "title": "JevAgentHarness",
+  "url": "https://x.com/dair_ai/status/2111496216567742892",
+  "source": "X / DAIR.AI",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P0",
+  "tags": [
+   "Act",
+   "Top 10",
+   "Applicational",
+   "X"
+  ],
+  "key_takeaway": [
+   "JevAgentHarness：蒸餾開源 **4B** decision model（多數來自 Jev 對 agent 自身 state 嘅答案），喺 harness 內處理 routine tool 選擇——擬合 threshold 後降成本、唔改 outcome，甚至喺該 agent 內打贏 Jev。限制：專 harness 內有效；跨 agent／open-world 泛化未報。"
+  ]
+ },
+ {
+  "id": "mai-gym-2026-10-19",
+  "title": "MAI-Gym",
+  "url": "https://huggingface.co/papers/2610.20939",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "MAI-Gym：統一 GUI eval／資料／online RL（mobile＋computer＋web）；9B agent MobileWorld **78.4%**、OSWorld-Verified **76.2%**；mocked→真機 28.8→48.1%。限制：Radar；開源 stack 規模大，本地復現成本高。"
+  ]
+ },
+ {
+  "id": "mjev-spatial-2026-10-19",
+  "title": "MJev-Spatial",
+  "url": "https://huggingface.co/papers/2610.22276",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "MJev-Spatial：用原生 attention matching 做 System One 空間決策，免自回歸文字解碼。限制：Radar；細節待 paper-gen／全文。"
+  ]
+ },
+ {
+  "id": "data-world-2026-10-19",
+  "title": "Data World / DABstep",
+  "url": "https://x.com/omarsar0/status/2111936617699332566",
+  "source": "X / omarsar0",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Applicational",
+   "X"
+  ],
+  "key_takeaway": [
+   "Data World：由生成機制產 data-analysis env／tasks／rubrics，再 RL；DABstep-Hard **+20.9**。限制：Radar；機制覆蓋面同洩漏風險未詳。"
+  ]
+ },
+ {
+  "id": "langchain-managed-deep-agents-2026-10-19",
+  "title": "LangChain Managed Deep Agents",
+  "url": "https://x.com/LangChain/status/2111146976683425860",
+  "source": "X / LangChain",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P2",
+  "tags": [
+   "Act",
+   "Radar",
+   "Model & IDE",
+   "X"
+  ],
+  "key_takeaway": [
+   "LangChain Managed Deep Agents：sandbox 外 proxy 注入 token，agent 永遠睇唔到憑證，只對已允許服務加 header。限制：Radar；惡意套件仍可打其他側信道。"
+  ]
+ },
+ {
+  "id": "mai-code-1-1-flash-2026-10-19",
+  "title": "MAI-Code-1.1-Flash",
+  "url": "https://microsoft.ai/news/mai-code-1-1-flash-br-better-faster-at-a-quarter-of-the-cost/",
+  "source": "Microsoft AI / Blog",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "model_release_implementation",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Model & IDE",
+   "Blog"
+  ],
+  "key_takeaway": [
+   "MAI-Code-1.1-Flash：相對 1.0 **¼** 成本、token 效率約 **+25%**；Terminal-Bench +22%、.NET +15%；code survival +4%。限制：Radar；頁面無絕對 USD／1M；OR 無 mai-code id。"
+  ]
+ },
+ {
+  "id": "opencode-2-0-32-2026-10-19",
+  "title": "OpenCode 2.0.32",
+  "url": "https://opencode.ai/changelog#v2-0-32",
+  "source": "Blog / OpenCode",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "changelog_feature",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Model & IDE",
+   "Blog"
+  ],
+  "key_takeaway": [
+   "OpenCode 2.0.32：開源 coding agent CLI bump（npm @opencode/cli@2.0.32）。限制：Radar；changelog 與 npm 可能 lag。"
+  ]
+ },
+ {
+  "id": "claude-code-2-1-302-2026-10-19",
+  "title": "Claude Code 2.1.302",
+  "url": "https://code.claude.com/docs/en/changelog#2-1-302",
+  "source": "Anthropic / Blog",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "changelog_feature",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Model & IDE",
+   "Blog"
+  ],
+  "key_takeaway": [
+   "Claude Code 2.1.302：Anthropic CLI bump；npm 另見 2.1.303 未入公開 changelog。限制：Radar；changelog 頁面或 lag。"
+  ]
+ },
+ {
+  "id": "amd-mi355x-2026-10-19",
+  "title": "AMD MI355X + vLLM",
+  "url": "https://lnkd.in/p/gpNCUsZt",
+  "source": "LinkedIn / Embedded LLM",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Applicational",
+   "LinkedIn"
+  ],
+  "key_takeaway": [
+   "AMD MI355X＋vLLM 聲稱 agentic inference 打贏 NVIDIA。限制：Radar；LinkedIn claim，基準／workload 需核實。"
+  ]
+ },
+ {
+  "id": "ai-memory-2026-10-19",
+  "title": "akitaonrails/ai-memory",
+  "url": "https://github.com/akitaonrails/ai-memory",
+  "source": "GitHub",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "GitHub",
+   "GitHub"
+  ],
+  "key_takeaway": [
+   "akitaonrails/ai-memory：為 coding CLI 提供長期記憶／session 交接。限制：Radar；未跑 SYSTEM_DESIGN（Top10 無 github.com）。"
+  ]
+ },
+ {
+  "id": "3dcodeverse-2026-10-19",
+  "title": "3DCodeVerse",
+  "url": "https://huggingface.co/papers/2610.22341",
+  "source": "Hugging Face / Papers",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "research",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Papers",
+   "HF"
+  ],
+  "key_takeaway": [
+   "3DCodeVerse（USC）：把 3D 世界當可執行 code，畀 coding agents 建造同驗證。限制：Radar。"
+  ]
+ },
+ {
+  "id": "wet-lab-2026-10-19",
+  "title": "Google wet-lab agents",
+  "url": "https://research.google/blog/grounding-ai-agents-in-biological-reality-building-blocks-for-autonomous-wet-labs/",
+  "source": "Google Research / Blog",
+  "published_at": "2026-10-19T00:00:00Z",
+  "type": "application_case_study",
+  "priority": "P2",
+  "tags": [
+   "Watch",
+   "Radar",
+   "Applicational",
+   "Blog"
+  ],
+  "key_takeaway": [
+   "Google wet-lab agents：biological reality grounding／autonomous wet-lab 構件。限制：Radar；垂直研究。"
+  ]
+ }
+]
